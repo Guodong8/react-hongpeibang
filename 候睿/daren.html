@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>达人</title>
+    <style>
+         .wrap {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+
+        .navigation {
+            background: #FFFFFF;
+            height: 2.75rem;
+            z-index: 6;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 0 1.125rem;
+            margin: 0 auto;
+            max-width: 37.5rem;
+            box-sizing: border-box;
+        }
+
+        .iconfont {
+            font-size: 0;
+            height: 2.75rem;
+
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .iiconfont {
+            width: 1.6875rem;
+            height: 1.6875rem;
+            margin: 0.5938rem 0;
+        }
+
+        .iconfont {
+            font-size: 0;
+            height: 2.75rem;
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .toptext {
+            position: relative;
+            text-align: center;
+            padding: 0;
+            margin: 0 1.5625rem;
+            overflow: hidden;
+            zoom: 1;
+        }
+
+        .alltext {
+            position: relative;
+            text-align: center;
+            cursor: pointer;
+            display: inline-block;
+            box-sizing: border-box;
+            width: 4.0625rem;
+            line-height: 2.75rem;
+            height: 2.75rem;
+            font-size: 1rem;
+            color: #999999;
+        }
+        .underline {
+    width: 1.25rem;
+    height: 0.125rem;
+    margin: -0.3125rem auto 0 auto;
+    border-radius: 1.25rem;
+    background-color: #E98B71;
+}
+        .alltext.active {
+            color: #4A4945;
+            font-weight: bold;
+        }
+
+        /*中间*/
+        .main {
+            position: absolute;
+            left: 0;
+            right: 0;
+            max-width: 37.5rem;
+            -webkit-overflow-scrolling: touch;
+            margin: 0 auto;
+            padding: 0;
+            overflow-y: scroll;
+        }
+    /*用户内容*/
+    .admincontentwrap {
+    margin: 0 auto;
+    padding: 0;
+    letter-spacing: 0.0313rem;
+    list-style-type: none;
+    overflow: hidden;
+    zoom: 1;
+}
+.admincontent {
+    position: relative;
+    overflow: hidden;
+    zoom: 1;
+    background-color: #FFFFFF;
+}
+.admininformation {
+    margin: 0.625rem 0.9375rem;
+    overflow: hidden;
+}
+.adminhead {
+    width: 2.5rem;
+    height: 2.5rem;
+    float: left;
+    font-size: 0;
+    margin-right: 0.625rem;
+}
+.adminheadimg {
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.adminheadsmallimg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 0.0625rem solid;
+    border-color: #E7E2E5;
+}
+.adminnamewrap {
+    overflow: hidden;
+    height: 1.25rem;
+    display: inline-block;
+    max-width: 66%;
+    margin-right: 0;
+}
+.adminname {
+    font-size: 0.8125rem;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    text-align: left;
+    color: #4A4945;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.admindescribe {
+    text-align: left;
+    font-size: 0.75rem;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    color: #999999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.adminworks {
+    display: inline-block;
+    margin-left: 0.625rem;
+}
+.conversation {
+    margin: 0.625rem 0.9375rem 0.6875rem 0.9375rem;
+    font-size: 0.875rem;
+    color: #4A4945;
+    line-height: 1.25rem;
+    max-height: 5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -moz-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+}
+.conversationtext {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    display: inline-block;
+    color: #498DD0;
+}
+
+.workscontentwrap {
+    position: relative;
+    margin: 0 0.6875rem;
+    padding: 0;
+    overflow: hidden;
+    zoom: 1;
+}
+.workscontent {
+    display: inline-block;
+    width: 33.333%;
+    font-size: 0;
+    padding: 0.25rem;
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.worksimg {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+.worksshade {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.worksshade2 {
+    display: block;
+    text-decoration: none;
+}
+.worksintroduce {
+    position: relative;
+    overflow: hidden;
+    zoom: 1;
+    background-color: #F5F7F9;
+    box-sizing: border-box;
+    border-radius: 0.25rem;
+    display: flex;
+}
+.workssmallimg {
+    display: inline-flex;
+    border-radius: 0.25rem;
+    height: 4.375rem;
+    width: 4.375rem;
+}
+.worksright {
+    display: inline-flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0.9375rem;
+}
+.worksname {
+    font-size: 0.875rem;
+    color: #313131;
+    font-weight: bold;
+    text-align: justify;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.worksworker {
+    margin-top: 0.3125rem;
+    font-size: 0.8125rem;
+    color: #999;
+    text-align: justify;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.worksread {
+    font-size: 0.6875rem;
+    color: #999999;
+    margin: 0.4375rem 0.8125rem 0.3125rem 0.8125rem;
+    display: block
+}
+.worksfooter {
+    height: 1.875rem;
+    box-sizing: border-box;
+    margin: 0 0.9375rem;
+    border-top: 0.0625rem solid;
+    border-top-color: #E7E2E5;
+}
+.worksactions {
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    margin-top: 0.25rem;
+    box-sizing: border-box;
+    border-right: 0.0625rem solid;
+    border-right-color: #E7E2E5;
+}
+.worksup {
+    font-size: 0;
+    width: 1.1875rem;
+    height: 1.1875rem;
+    vertical-align: middle;
+    display: inline-block;
+}
+.worksiconfont {
+    width: 100%;
+    overflow: hidden;
+}
+.worksnum {
+    font-size: 0.75rem;
+    color: #999999;
+    margin-left: 0.3125rem;
+    vertical-align: middle;
+    display: inline-block;
+}
+        /*尾部*/
+        .footer {
+            background-color: #FFFFFF;
+            list-style-type: none;
+            height: 3.0625rem;
+            z-index: 7;
+            position: fixed;
+            bottom: 0rem;
+            left: 0rem;
+            right: 0rem;
+            margin: 0 auto;
+            padding: 0;
+            max-width: 37.5rem;
+        }
+
+        .footerdev {
+            font-size: 0;
+            width: 1.5625rem;
+            height: 1.5625rem;
+            margin: 0.25rem auto;
+            overflow: hidden;
+        }
+
+        .footerimg {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .footertext {
+            font-size: 0.6875rem;
+            color: #999999;
+        }
+
+        .footertext1 {
+            display: block;
+            text-decoration: none;
+        }
+
+        .textbuju {
+            width: 25%;
+            height: 3.0625rem;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+        <div class="wrap">
+          <div>
+ <!--导航-->
+ <div class="navigation">
+        <span class="iconfont" style="float:left;"><img alt="" title="" src="./img/add.jpg"
+                class="iiconfont"></span>
+        <span class="iconfont" style="float:right;"><img alt="" title="" src="./img/remind.jpg"
+                class="iiconfont"></span>
+        <div class="toptext">
+            <div class="alltext"><span>关注</span></div>
+            <div class="alltext "><span>最新</span>
+                
+            </div>
+            <div class="alltext active"><span>达人</span>
+                <div class="underline"></div>
+            </div>
+        </div>
+    </div>
+     <!--中间-->
+            
+     <div class="main" style="top:2.75rem;bottom:3.125rem ">
+            <div class="admincontentwrap">
+                    <div style="margin-bottom:0.625rem;">
+                        <div class="admincontent">
+                            <div class="admininformation">
+                                <div class="adminhead">
+                                    <div class="adminheadimg"><img alt="" title=""
+                                            src="./img/headimg.jpg"
+                                            class="adminheadsmallimg" style="background: none; width: 2.375rem; height: 2.375rem;">
+                                    </div>
+                                </div>
+                                <div class="adminnamewrap">
+                                    <div class="adminname">馬馬👑
+                                    </div>
+                                </div>
+                                <div class="admindescribe"><span>11分钟前</span><span class="adminworks">南瓜蒸蛋糕</span></div>
+                            </div>
+                            <div class="conversation"><span class="conversationtext">#下午茶#</span><span></span></div>
+                            <div style="margin-bottom:0.6875rem;">
+                                <div class="workscontentwrap">
+                                    <div class="workscontent" style="width:100%;height:18.75rem;"><img alt="" title=""
+                                            src="./img/works.jpg"
+                                            class="worksimg" style="background: none; width: 13.6875rem; height: 18.25rem;">
+                                    </div><a class="worksshade2 worksshade" href="/dish/14728398"></a>
+                                </div>
+                            </div>
+                            <div style="margin-bottom:0.9375rem;padding:0 0.9375rem;">
+                                <div class="worksintroduce">
+                                    <img alt="" title=""
+                                        src="./img/smallworks.jpg"
+                                        class="workssmallimg" style="background: none; width: 4.375rem; height: 4.375rem;">
+                                    <div class="worksright">
+                                        <div class="worksname">南瓜蒸蛋糕</div>
+                                        <div class="worksworker">作者：高高的美食天地</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="worksread">21次浏览</div>
+                            <div class="worksfooter">
+                                <div class="worksactions">
+                                    <div class="worksup"><img alt="" title=""
+                                            src="./img/up.jpg"
+                                            class="worksiconfont"></div>
+                                    <div class="worksnum">52
+                                    </div>
+                                </div>
+                                <div class="worksactions">
+                                    <div class="worksup"><img alt="" title=""
+                                            src="./img/Reward.jpg"
+                                            class="worksiconfont"></div>
+                                    <div class="worksnum">打赏
+                                    </div>
+                                </div>
+                                <div class="worksactions">
+                                    <div class="worksup"><img alt="" title=""
+                                            src="./img/talk.jpg"
+                                            class="worksiconfont"></div>
+                                    <div class="worksnum">评论
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+           <!--尾部-->
+           <ul class="footer"><a class="footertext1 textbuju" href="/">
+            <div class="footerdev"><img alt="" title="" src="./img/learn.jpg" class="footerimg"></div>
+            <div class="footertext">学烘焙</div>
+        </a><a class="footertext1 textbuju" href="/show">
+            <div class="footerdev"><img alt="" title="" src="./img/circle.jpg" class="footerimg"></div>
+            <div class="footertext activeRed">烘焙圈</div>
+        </a><a class="footertext1 textbuju" href="/questionAndAnswer">
+            <div class="footerdev"><img alt="" title="" src="./img/ask.jpg" class="footerimg"></div>
+            <div class="footertext">问答</div>
+        </a><a class="footertext1 textbuju" href="/login">
+            <div class="footerdev"><img alt="" title="" src="./img/Caveolae.jpg" class="footerimg"></div>
+            <div class="footertext">小窝</div>
+        </a></ul>
+
+          </div>
+
+
+            </div>
+</body>
+</html>
