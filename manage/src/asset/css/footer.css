@@ -1,0 +1,24 @@
+.foot{
+    background-color: #FFFFFF;
+height: 49px;
+position: fixed;
+bottom: 0px;
+left: 0px;
+right: 0px;
+margin: 0 auto;
+padding: 0;
+width: 100%;
+}
+.foot a{
+    width: 25%;
+height: 49px;
+display: inline-block;
+text-align: center;
+vertical-align: middle;
+background-color: #FFFFFF;
+font-size: 12px;
+}
+.foot a img{
+    width: 25px;
+    margin-top: 4px;
+}
