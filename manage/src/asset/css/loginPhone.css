@@ -6,105 +6,105 @@
 }
 .loginPhone-header{
     width: 100%;
-    height: 40px;
+    height: 2.5rem;
     display: flex;
     justify-content: space-between;
-    line-height: 40px;
+    line-height: 2.5rem;
     color: #4A4945;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 .loginPhone-header span{
-    margin:0 10px 0 10px;
-    font-size: 16px;
+    margin:0 0.625rem 0 0.625rem;
+    font-size: 1rem;
     color: #1976D2;
 }
 .adminName{
     width: 100%;
-    height: 66px;
-    margin-top: 15px;
-    line-height: 66px;
+    height: 4.125rem;
+    margin-top: 0.9375rem;
+    line-height: 4.125rem;
 }
 .adminName img{
-    width: 25px;
-    margin-left: 15px;
+    width: 1.5625rem;
+    margin-left: 0.9375rem;
 }
 .adminName input{
-    height:35px;
-    line-height:35px;
+    height:2.1875rem;
+    line-height:2.1875rem;
     background-color:#FFFFFF;
-    font-size:18px;
-    padding:0px 0px 7px 0px;
-    margin:15px 0;
-    border-radius:0px;
+    font-size:1.125rem;
+    padding:0rem 0rem 0.4375rem 0rem;
+    margin:0.9375rem 0;
+    border-radius:0rem;
     border: none;
-    border-bottom: 1px solid #E7E2E5;
+    border-bottom: 0.0625rem solid #E7E2E5;
 }
 .adminName span{
-    font-size: 16px;
-    line-height: 35px;
+    font-size: 1rem;
+    line-height: 2.1875rem;
     color: #1976D2;
-    padding: 15px 20px 15px 0;
-    border-bottom: 1px solid #E7E2E5;
-    margin-left: 15px;
+    padding: 0.9375rem 1.25rem 0.9375rem 0;
+    border-bottom: 0.0625rem solid #E7E2E5;
+    margin-left: 0.9375rem;
 }
 .forgetPassword{
     color: #1976D2;
-    font-size: 14px;
-    margin-right: 13px;
+    font-size: 0.875rem;
+    margin-right: 0.8125rem;
     float: right;
     cursor: pointer;
     position: relative;
     z-index: 2;
-    margin-top: -20px;
+    margin-top: -1.25rem;
 }
 .password{
     width: 100%;
-    height: 66px;
-    margin-top: 15px;
-    line-height: 66px;
+    height: 4.125rem;
+    margin-top: 0.9375rem;
+    line-height: 4.125rem;
 }
 .passWord img{
-    width: 25px;
-    margin-left: 15px;
+    width: 1.5625rem;
+    margin-left: 0.9375rem;
 }
 .passWord input{
-    height:35px;
-    line-height:35px;
+    height:2.1875rem;
+    line-height:2.1875rem;
     background-color:#FFFFFF;
-    font-size:18px;
-    padding:0px 0px 7px 0px;
-    margin:15px 0;
-    border-radius:0px;
+    font-size:1.125rem;
+    padding:0rem 0rem 0.4375rem 0rem;
+    margin:0.9375rem 0;
+    border-radius:0rem;
     border: none;
-    border-bottom: 1px solid #E7E2E5;
-    margin-left: 15px;
+    border-bottom: 0.0625rem solid #E7E2E5;
+    margin-left: 0.9375rem;
 }
 .loginPhone-btn{
     width: 100%;
     text-align: center;
-    margin-top: 30px; 
+    margin-top: 1.875rem; 
 }
 .loginPhone-btn button{
     background-image: linear-gradient(to right,#0096FB,#1976D2);
-    font-size: 18px;
-    width: 250px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 40px;
+    font-size: 1.125rem;
+    width: 15.625rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border-radius: 2.5rem;
     color: #FFFFFF;
     border: none;
 }
 .loginPhone-btn img{
-    width: 70px;
-    margin: 10px;
+    width: 4.375rem;
+    margin: 0.625rem;
 }
 .loginPhone-btn p{
-    margin-top:30px; 
-    font-size: 16px;
+    margin-top:1.875rem; 
+    font-size: 1rem;
     color: #999999;
 }
 .loginPhone-btn p:last-child{
-    margin-top:30px; 
+    margin-top:1.875rem; 
     color: #1976D2;
-    font-size: 20px;
+    font-size: 1.25rem;
 }

@@ -1,19 +1,19 @@
 .account-header{
     width: 100%;
-    height: 40px;
+    height: 2.5rem;
     display: flex;
     justify-content: space-between;
-    line-height: 40px;
+    line-height: 2.5rem;
     font-weight: bold;
     color: #4A4945;
-    font-size: 18px;
+    font-size: 1.125rem;
     background: #ffffff;
 }
 .account-header span{
-    padding:0 10px 0 10px;
+    padding:0 0.625rem 0 0.625rem;
 }
 .account-list {
-    margin-top: 10px;
+    margin-top: 0.625rem;
 }
 .account-list ul{
     width: 100%;
@@ -21,28 +21,28 @@
 }
 .account-list ul li{
     position: relative;
-    height: 44px;
+    height: 2.75rem;
     box-sizing: border-box;
-    border-bottom: 1px solid #E7E2E5;
+    border-bottom: 0.0625rem solid #E7E2E5;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 16px;
+    font-size: 1rem;
     color: #4A4945;
     background: #ffffff;
-    margin: 0px 15px;
+    margin: 0rem 0.9375rem;
     
 }
 .logout{
-    margin: 20px auto;
-font-size: 16px;
+    margin: 1.25rem auto;
+font-size: 1rem;
 width: 100%;
-height: 40px;
-line-height: 38px;
+height: 2.5rem;
+line-height: 2.375rem;
 text-align: center;
 background: #E98B71;
 color: #FFFFFF;
-border-radius: 4px;
+border-radius: 0.25rem;
 border: none;
 }
 

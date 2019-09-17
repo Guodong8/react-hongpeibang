@@ -1,24 +1,24 @@
 .foot{
     background-color: #FFFFFF;
-height: 49px;
+height: 3.0625rem;
 position: fixed;
-bottom: 0px;
-left: 0px;
-right: 0px;
+bottom: 0rem;
+left: 0rem;
+right: 0rem;
 margin: 0 auto;
 padding: 0;
 width: 100%;
 }
 .foot a{
     width: 25%;
-height: 49px;
+height: 3.0625rem;
 display: inline-block;
 text-align: center;
 vertical-align: middle;
 background-color: #FFFFFF;
-font-size: 12px;
+font-size: 0.75rem;
 }
 .foot a img{
-    width: 25px;
-    margin-top: 4px;
+    width: 1.5625rem;
+    margin-top: 0.25rem;
 }

@@ -1,0 +1,400 @@
+.wrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.navigation {
+    background: #FFFFFF;
+    height: 2.75rem;
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 1.125rem;
+    margin: 0 auto;
+    max-width: 37.5rem;
+    box-sizing: border-box;
+}
+
+.iconfont {
+    font-size: 0;
+    height: 2.75rem;
+
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.iiconfont {
+    width: 1.6875rem;
+    height: 1.6875rem;
+    margin: 0.5938rem 0;
+}
+
+.iconfont {
+    font-size: 0;
+    height: 2.75rem;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.toptext {
+    position: relative;
+    text-align: center;
+    padding: 0;
+    margin: 0 1.5625rem;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.alltext {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 4.0625rem;
+    line-height: 2.75rem;
+    height: 2.75rem;
+    font-size: 1rem;
+    color: #999999;
+}
+
+.alltext.active {
+    color: #4A4945;
+    font-weight: bold;
+}
+.underline {
+width: 1.25rem;
+height: 0.125rem;
+margin: -0.3125rem auto 0 auto;
+border-radius: 1.25rem;
+background-color: #E98B71;
+}
+
+/*中间*/
+.main {
+    position: absolute;
+    left: 0;
+    right: 0;
+    max-width: 37.5rem;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 auto;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+.lunbowrap {
+    background-color: #FFFFFF;
+    border-bottom: 0.0625rem solid;
+    border-bottom-color: #E7E2E5;
+    padding: 0.3125rem 0 0.625rem 0;
+    margin: 0 auto;
+    text-align: center;
+    zoom: 1;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.lunbo {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+.lunbotu {
+    font-size: 0;
+    position: relative;
+    margin-right: 0.5rem;
+    border-radius: 0.25rem;
+    width: 9.375rem;
+    height: 5.3125rem;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    zoom: 1;
+    box-sizing: border-box;
+}
+
+/*餐品*/
+.canpinwrap {
+    background-color: #FFFFFF;
+    margin-bottom: 0.625rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.canpin {
+    background-color: #FFFFFF;
+    padding: 0.625rem 0;
+    margin: 0 auto;
+    zoom: 1;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.canpinList {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+.canlist:first-child {
+    margin-left: 0.9375rem;
+}
+
+.canlist {
+    font-size: 0.9375rem;
+    line-height: 1.3125rem;
+    text-align: center;
+    position: relative;
+    margin-right: 0.5rem;
+    border-radius: 0.25rem;
+    padding: 0.4375rem 0.625rem;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    zoom: 1;
+    box-sizing: border-box;
+    color: #FFFFFF;
+}
+/*用户内容*/
+.admincontentwrap {
+margin: 0 auto;
+padding: 0;
+letter-spacing: 0.0313rem;
+list-style-type: none;
+overflow: hidden;
+zoom: 1;
+}
+.admincontent {
+position: relative;
+overflow: hidden;
+zoom: 1;
+background-color: #FFFFFF;
+}
+.admininformation {
+margin: 0.625rem 0.9375rem;
+overflow: hidden;
+}
+.adminhead {
+width: 2.5rem;
+height: 2.5rem;
+float: left;
+font-size: 0;
+margin-right: 0.625rem;
+}
+.adminheadimg {
+width: 100%;
+height: 100%;
+font-size: 0;
+position: relative;
+overflow: hidden;
+cursor: pointer;
+}
+.adminheadsmallimg {
+width: 100%;
+height: 100%;
+border-radius: 50%;
+overflow: hidden;
+box-sizing: border-box;
+border: 0.0625rem solid;
+border-color: #E7E2E5;
+}
+.adminnamewrap {
+overflow: hidden;
+height: 1.25rem;
+display: inline-block;
+max-width: 66%;
+margin-right: 0;
+}
+.adminname {
+font-size: 0.8125rem;
+height: 1.25rem;
+line-height: 1.25rem;
+text-align: left;
+color: #4A4945;
+overflow: hidden;
+text-overflow: ellipsis;
+-webkit-text-overflow: ellipsis;
+-moz-text-overflow: ellipsis;
+white-space: nowrap;
+}
+.admindescribe {
+text-align: left;
+font-size: 0.75rem;
+height: 1.25rem;
+line-height: 1.25rem;
+color: #999999;
+overflow: hidden;
+text-overflow: ellipsis;
+-webkit-text-overflow: ellipsis;
+-moz-text-overflow: ellipsis;
+white-space: nowrap;
+}
+.adminworks {
+display: inline-block;
+margin-left: 0.625rem;
+}
+.conversation {
+margin: 0.625rem 0.9375rem 0.6875rem 0.9375rem;
+font-size: 0.875rem;
+color: #4A4945;
+line-height: 1.25rem;
+max-height: 5rem;
+overflow: hidden;
+text-overflow: ellipsis;
+display: -moz-box;
+display: -webkit-box;
+-webkit-line-clamp: 4;
+-moz-line-clamp: 4;
+line-clamp: 4;
+-webkit-box-orient: vertical;
+-moz-box-orient: vertical;
+box-orient: vertical;
+}
+.conversationtext {
+font-size: 0.875rem;
+line-height: 1.25rem;
+display: inline-block;
+color: #498DD0;
+}
+
+.workscontentwrap {
+position: relative;
+margin: 0 0.6875rem;
+padding: 0;
+overflow: hidden;
+zoom: 1;
+}
+.workscontent {
+display: inline-block;
+width: 33.333%;
+font-size: 0;
+padding: 0.25rem;
+margin: 0;
+overflow: hidden;
+box-sizing: border-box;
+}
+.worksimg {
+position: relative;
+height: 100%;
+overflow: hidden;
+z-index: 2;
+}
+.worksshade {
+display: block;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+}
+.worksshade2 {
+display: block;
+text-decoration: none;
+}
+.worksintroduce {
+position: relative;
+overflow: hidden;
+zoom: 1;
+background-color: #F5F7F9;
+box-sizing: border-box;
+border-radius: 0.25rem;
+display: flex;
+}
+.workssmallimg {
+display: inline-flex;
+border-radius: 0.25rem;
+height: 4.375rem;
+width: 4.375rem;
+}
+.worksright {
+display: inline-flex;
+flex: 1;
+flex-direction: column;
+justify-content: center;
+margin-left: 0.9375rem;
+}
+.worksname {
+font-size: 0.875rem;
+color: #313131;
+font-weight: bold;
+text-align: justify;
+text-overflow: ellipsis;
+overflow: hidden;
+display: -webkit-box;
+-webkit-line-clamp: 1;
+-webkit-box-orient: vertical;
+word-break: break-all;
+}
+.worksworker {
+margin-top: 0.3125rem;
+font-size: 0.8125rem;
+color: #999;
+text-align: justify;
+text-overflow: ellipsis;
+overflow: hidden;
+display: -webkit-box;
+-webkit-line-clamp: 1;
+-webkit-box-orient: vertical;
+word-break: break-all;
+}
+.worksread {
+font-size: 0.6875rem;
+color: #999999;
+margin: 0.4375rem 0.8125rem 0.3125rem 0.8125rem;
+display: block
+}
+.worksfooter {
+height: 1.875rem;
+box-sizing: border-box;
+margin: 0 0.9375rem;
+border-top: 0.0625rem solid;
+border-top-color: #E7E2E5;
+}
+.worksactions {
+display: inline-block;
+width: 32%;
+text-align: center;
+height: 1.25rem;
+line-height: 1.25rem;
+margin-top: 0.25rem;
+box-sizing: border-box;
+border-right: 0.0625rem solid;
+border-right-color: #E7E2E5;
+}
+.worksup {
+font-size: 0;
+width: 1.1875rem;
+height: 1.1875rem;
+vertical-align: middle;
+display: inline-block;
+}
+.worksiconfont {
+width: 100%;
+overflow: hidden;
+}
+.worksnum {
+font-size: 0.75rem;
+color: #999999;
+margin-left: 0.3125rem;
+vertical-align: middle;
+display: inline-block;
+}
+/*尾部*/
