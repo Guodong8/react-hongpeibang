@@ -21,7 +21,7 @@ class Home extends React.Component{
                         <Route path={"/questions"} component={Questions}></Route>
                         <Route path={"/user"} component={User}></Route>
                 <nav className="foot">
-                     <NavLink to={"/"} exact activeStyle={{color:"green"}}>
+                     <NavLink to={"/study"} exact activeStyle={{color:"green"}}>
                          <img src="https://image.hongbeibang.com/FsxN7RUFRJ9Zdris5Z22haR2xIhj?50X50&imageView2/1/w/50/h/50"></img>
                          <p>学烘焙</p>
                     </NavLink>
