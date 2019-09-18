@@ -10,7 +10,7 @@ import {
   Route,
   Switch
 } from "react-router-dom"
-import Daren from './views/circle/Daren';
+
 
 function App() {
   return (

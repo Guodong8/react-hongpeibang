@@ -1,12 +1,20 @@
 import React from "react"
+import axios from "axios"
+const request = require("request")
+request("https://api.hongbeibang.com/v2/feed/getNew?pageIndex=0&pageSize=10",function (err,response,body) {
+// console.log(response);//response是请求的相关信息 包括body.地址 域名等等 而body是情求回来的接口数据
 
-import {
-    Route,
-    Link,
-    NavLink
-} from "react-router-dom"
-function News(props) {
-    
+})
+class News extends React.Component {
+    constructor(){
+        super()
+       this.state={
+           content:[]
+       }
+    }   
+    render(){
+
+        const content = this.state.content
     return (
 
 
@@ -49,27 +57,36 @@ function News(props) {
                     </div>
                 </div>
                 {/* <!--内容--> */}
-                <div className="admincontentwrap">
-                    <div style={{ marginbottom: '0.625rem' }}>
+                
+                <div className="admincontentwrap" >
+                {
+                          content.map((item)=>(
+                    <div  style={{ marginbottom: '0.625rem' }} key={item.contentId}>
+                       
+
+                          
+                        
+
+                        
                         <div className="admincontent">
                             <div className="admininformation">
                                 <div className="adminhead">
                                     <div className="adminheadimg"><img alt="" title=""
-                                        src={require('../asset/img/headimg.jpg')}
+                                        src={item.clientImage}
                                         className="adminheadsmallimg" style={{ background: 'none', width: '2.375rem', height: '2.375rem' }} />
                                     </div>
                                 </div>
                                 <div className="adminnamewrap">
-                                    <div className="adminname">馬馬👑
+                                    <div className="adminname">{item.clientName}
                                     </div>
                                 </div>
-                                <div className="admindescribe"><span>11分钟前</span><span className="adminworks">南瓜蒸蛋糕</span></div>
+                                <div className="admindescribe"><span>{item.createTime}</span><span className="adminworks">{item.coverTitle}</span></div>
                             </div>
-                            <div className="conversation"><span className="conversationtext">#下午茶#</span><span></span></div>
+                            <div className="conversation"><span className="conversationtext">{item.communityName}</span><span></span></div>
                             <div style={{ marginbottom: '0.6875rem' }}>
                                 <div className="workscontentwrap">
                                     <div className="workscontent" style={{ width: '100%', height: '18.75rem' }}><img alt="" title=""
-                                        src={require('../asset/img/works.jpg')}
+                                        src={item.image}
                                         className="worksimg" style={{ background: 'none', width: '13.6875rem', height: '18.25rem' }} />
                                     </div><a className="worksshade2 worksshade" href="/dish/14728398"></a>
                                 </div>
@@ -77,40 +94,44 @@ function News(props) {
                             <div style={{ marginbottom: '0.9375rem', padding: '0 0.9375rem' }}>
                                 <div className="worksintroduce">
                                     <img alt="" title=""
-                                        src={require('../asset/img/smallworks.jpg')}
+                                        src={item.image}
                                         className="workssmallimg" style={{ background: 'none', width: ' 4.375rem', height: '4.375rem' }} />
                                     <div className="worksright">
-                                        <div className="worksname">南瓜蒸蛋糕</div>
-                                        <div className="worksworker">作者：高高的美食天地</div>
+                                        <div className="worksname">{item.coverTitle}</div>
+                                        <div className="worksworker">{item.clientName}</div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="worksread">21次浏览</div>
+                            <div className="worksread">{item.visitNum}人浏览</div>
                             <div className="worksfooter">
                                 <div className="worksactions">
                                     <div className="worksup"><img alt="" title=""
                                         src={require('../asset/img/up.jpg')}
                                         className="worksiconfont" /></div>
-                                    <div className="worksnum">52
+                                    <div className="worksnum">{item.likeNum}
                                     </div>
                                 </div>
                                 <div className="worksactions">
                                     <div className="worksup"><img alt="" title=""
                                         src={require('../asset/img/Reward.jpg')}
                                         className="worksiconfont" /></div>
-                                    <div className="worksnum">打赏
+                                    <div className="worksnum">{item.rewardNum} 
+                                    
                                     </div>
                                 </div>
                                 <div className="worksactions">
                                     <div className="worksup"><img alt="" title=""
                                         src={require('../asset/img/talk.jpg')}
                                         className="worksiconfont" /></div>
-                                    <div className="worksnum">评论
+                                    <div className="worksnum">{item.commentNum}
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
+                    ))
+                }
                 </div>
             </div>
         
@@ -132,14 +153,17 @@ function News(props) {
 
 
     )
-// async componentDidMount(){
-//   const {data}=await axios.get(`/v2/feed/getNew?pageIndex=0&pageSize=10`)
-//       console.log(data)
-//       this.setState({
-//         xxlist:data.data.content.data
-//       })
-//       console.log(this.state.xxlist)
-// }
+    }
+    async componentDidMount(){
+        
+        const {data} = await axios.get(`/hpb/v2/feed/getNew?pageIndex=0&pageSize=10`);
+        console.log(data);
+        this.setState({
+            content:data.data.content
+        })
+        console.log(this.state.content)
+    }
+
 }
 
 

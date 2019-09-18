@@ -1,4 +1,11 @@
+* {
+    margin: 0;
 
+}
+html,
+body {
+    height: 100%;
+}
 
 
 
@@ -72,6 +79,8 @@ background-color: #E98B71;
     max-width: 37.5rem;
     -webkit-overflow-scrolling: touch;
     margin: 0 auto;
+    flex: 1;
+    overflow: auto;
     padding: 0;
     overflow-y: scroll;
 }
@@ -158,7 +167,15 @@ background-color: #E98B71;
 
 
 /*达人*/
-
+.s-1f31d5de {
+    display: inline-block;
+    width: 33.333%;
+    font-size: 0;
+    padding: 4px;
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
 
 /*中间*/
 .main {
