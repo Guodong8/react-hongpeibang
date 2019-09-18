@@ -10,6 +10,7 @@ import {
   Route,
   Switch
 } from "react-router-dom"
+import Daren from './views/circle/Daren';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
                 <Route path={"/login"} component={Login}></Route>
                 <Route path={"/loginPhone"} component={LoginPhone}></Route>
                 <Route path={"/account"} component={Account}></Route>
-
+               
                 <Route path={"/"} component={Home}></Route>             
           </Switch>
           

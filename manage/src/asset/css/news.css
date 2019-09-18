@@ -1,27 +1,8 @@
-.wrap {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-}
 
-.navigation {
-    background: #FFFFFF;
-    height: 2.75rem;
-    z-index: 6;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 0 1.125rem;
-    margin: 0 auto;
-    max-width: 37.5rem;
-    box-sizing: border-box;
-}
 
-.iconfont {
+
+
+ .iconfont {
     font-size: 0;
     height: 2.75rem;
 
@@ -81,6 +62,7 @@ margin: -0.3125rem auto 0 auto;
 border-radius: 1.25rem;
 background-color: #E98B71;
 }
+
 
 /*中间*/
 .main {
@@ -172,6 +154,22 @@ background-color: #E98B71;
     zoom: 1;
     box-sizing: border-box;
     color: #FFFFFF;
+}
+
+
+/*达人*/
+
+
+/*中间*/
+.main {
+    position: absolute;
+    left: 0;
+    right: 0;
+    max-width: 37.5rem;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 auto;
+    padding: 0;
+    overflow-y: scroll;
 }
 /*用户内容*/
 .admincontentwrap {
@@ -398,3 +396,4 @@ vertical-align: middle;
 display: inline-block;
 }
 /*尾部*/
+

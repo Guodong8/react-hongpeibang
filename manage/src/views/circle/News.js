@@ -1,9 +1,18 @@
 import React from "react"
-import "../../asset/css/news.css"
 
+import Daren from "../../components/daren"
+import Follow from "../../components/follow"
+import {
+    Route,
+    Link,
+    NavLink
+} from "react-router-dom"
 class News extends React.Component{
     
-   
+    constructor(){
+        super()
+    }
+    
     render(){
         return(
           
@@ -15,13 +24,18 @@ class News extends React.Component{
                     <img alt="" title="" src={require('../../asset/img/add.jpg')}className="iiconfont"/></span>
                 <span className="iconfont" style={{float:'right'}}>
                     <img alt="" title="" src={require('../../asset/img/remind.jpg')}className="iiconfont"/></span>
-                <div className="toptext">
-                    <div className="alltext"><span>关注</span></div>
-                    <div className="alltext active"><span>最新</span>
-                        <div className="underline"></div>
-                    </div>
-                    <div className="alltext"><span>达人</span></div>
-                </div>
+
+                    <div className="toptext">
+
+<div className="alltext"><span>关注</span></div>
+ <div className="alltext active"><span>最新</span>
+     <div className="underline"></div>
+ </div>
+
+
+  <div className="alltext"  ><span>达人</span></div>
+                                                       
+</div>
             </div>
             
             
@@ -141,7 +155,6 @@ class News extends React.Component{
             
         }
     }
-
+    
 
 export default News
-  

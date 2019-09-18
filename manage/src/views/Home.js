@@ -2,6 +2,7 @@ import React from "react";
 
 import User from "./user/User";
 import News from "./circle/News";
+import Tag from "./circle/Tag"
 import Study from "./Study";
 import Questions from "./Questions";
 import "../asset/css/footer.css"
@@ -17,7 +18,7 @@ class Home extends React.Component{
         return(
             <div className="footer">
                         <Route path={"/"}exact component={Study}></Route>
-                        <Route path={"/circle"}  component={News}></Route>
+                        <Route path={"/circle"}  component={Tag}></Route>
                         <Route path={"/questions"} component={Questions}></Route>
                         <Route path={"/user"} component={User}></Route>
                 <nav className="foot">
