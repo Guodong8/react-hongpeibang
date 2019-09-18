@@ -8,7 +8,8 @@ import "../asset/css/footer.css"
 
 import {
     Route,
-    NavLink
+    NavLink,
+    Redirect
 } from "react-router-dom"
 
 
@@ -17,6 +18,7 @@ class Home extends React.Component{
         return(
             <div className="footer">
                         <Route path={"/"}exact component={Study}></Route>
+                     
                         <Route path={"/circle"}  component={News}></Route>
                         <Route path={"/questions"} component={Questions}></Route>
                         <Route path={"/user"} component={User}></Route>

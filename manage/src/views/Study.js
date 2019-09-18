@@ -1,6 +1,7 @@
 import React from "react"
 import "../../src/asset/css/baking.css"
 import "../asset/iconfont/iconfont.css"
+import Home from "./Home";
 class Study extends React.Component{
   render(){
       return(
@@ -189,8 +190,9 @@ class Study extends React.Component{
             
                 </div>
             </div>
-
+            
         </section>
+        <Home></Home>
         
     </div>
     

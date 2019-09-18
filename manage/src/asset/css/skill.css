@@ -1,0 +1,107 @@
+body {
+    margin: 0 auto;
+    background: #F5F7F9;
+}
+        .wrap {
+            padding: 0;
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .contentwrap {
+    padding-bottom: 50px;
+    background-color: #FFFFFF;
+}
+.navigation {
+    background: #FFFFFF;
+    height: 44px;
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 18px;
+    margin: 0 auto;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+.navigationi {
+    font-size: 0;
+    height: 44px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.navigationimg {
+    width: 27px;
+    height: 27px;
+    margin: 9.5px 0;
+}
+.navigationcontent {
+    height: 44px;
+    overflow: hidden;
+    zoom: 1;
+}
+.main {
+    flex: 1;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 140px;
+}
+.maincontent {
+    padding: 15px 0;
+    margin: 0 15px;
+    border-top-color: #F5F7F9;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+.maincontent:first-child {
+    border-top-color: #FFF;
+}
+.mainview {
+    overflow: hidden;
+    flex-direction: row;
+    display: flex;
+    border-top-color: #F5F7F9;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+.mainview:first-child {
+    border-top-color: #FFF;
+}
+.maintext {
+    flex: 1;
+    margin-left: 15px;
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 22.5px;
+    color: #313131;
+}
+
+
+
+.downloadwrap {
+    margin: 0 auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 600px;
+    cursor: pointer;
+}
+.download {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 600px;
+}
+.downloadimg {
+    width: 100%;
+    max-width: 600px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

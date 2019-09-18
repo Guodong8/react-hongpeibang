@@ -8,7 +8,9 @@ import Study from "./views/Study"
 import {
   BrowserRouter as Router,
   Route,
-  Switch
+  Switch,
+  Redirect
+
 } from "react-router-dom"
 
 function App() {
@@ -21,8 +23,9 @@ function App() {
                 <Route path={"/loginPhone"} component={LoginPhone}></Route>
                 <Route path={"/account"} component={Account}></Route>
                 <Route path={"/study"} component={Study}></Route>
-
-                <Route path={"/"} component={Home}></Route>             
+               
+                <Route path={"/"} component={Home}></Route>    
+                   
           </Switch>
           
         </Router>
