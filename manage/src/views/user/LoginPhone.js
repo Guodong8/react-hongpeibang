@@ -13,6 +13,9 @@ class Login extends React.Component{
     goback(){
         this.props.history.go(-1)
     }
+    toRegister(){
+        this.props.history.push("/register")
+    }
     submit(){
 
         // this.props.history.push("/user")
@@ -50,7 +53,7 @@ class Login extends React.Component{
                             <img src="https://image.hongbeibang.com/FmQ44nNcTSqmWx3s9wT0hUUBMPb1?200X200&imageView2/1/w/140/h/140"></img>
                             <img src="https://image.hongbeibang.com/Fq_j5DBvHFjeXIgXq-fFFDtiIvq5?200X200&imageView2/1/w/140/h/140"></img>                           
                         </div>
-                        <p>快速注册</p>
+                        <p onClick={this.toRegister.bind(this)}>快速注册</p>
                     </div>
                 </div>
                
