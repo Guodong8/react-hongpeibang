@@ -1,0 +1,106 @@
+.wrap{
+  background: #fff;
+}
+.wtlist{
+  overflow: hidden;
+  background: #fff;
+  border-bottom: 0.0625rem solid #E7E2E5;
+  margin: 0 auto;
+  width: 21.5625rem;
+  
+  padding: 0.9375rem 0rem 0.625rem 0rem;
+}
+.listtitie{
+  margin: 0 auto 0.3125rem 0.3125rem;
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 1.5625rem;
+    max-height: 3.125rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #4A4945;
+}
+.xiangxi{
+  position: relative;
+    overflow: hidden;
+    zoom: 1;
+    background-color: #F5F7F9;
+    box-sizing: border-box;
+    border-radius: 0.25rem;
+    display: flex;
+    margin-bottom: 0.625rem;
+    margin-top: 0.625rem;
+}
+.xiangxi img{
+  width: 4.375rem;
+  height: 4.375rem;
+}
+.xiangxi  .goodsname{
+  display: inline-flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0.9375rem;
+}
+.xiangxi  .goodsname  h4{
+  font-size: 0.875rem;
+    color: #313131;
+    font-weight: bold;
+    text-align: justify;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.xiangxi  .goodsname p{
+  margin-top: 0.3125rem;
+    font-size: 0.8125rem;
+    color: #999;
+    text-align: justify;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.wtlist .answer{
+    width: 21.5625rem;
+    height: 1.25rem;
+    /* display: flex;
+    justify-content: space-between; */
+
+}
+.wtlist .answer span:nth-child(1){
+ float: left;
+ display: block;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #999999;
+  
+  
+
+}
+
+.wtlist .answer span:nth-child(2){
+  font-size: 0.875rem;
+    line-height: 1.25rem;
+    vertical-align: middle;
+    display: inline-block;
+    color: #E98B71;
+    float: right;
+   
+    
+}
+.wtlist .answer span:nth-child(2) img{
+  width: 1.1875rem;
+    height: 1.1875rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.3125rem;
+    font-size: 0;
+   
+}
+
