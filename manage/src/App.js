@@ -5,6 +5,7 @@ import Home from "./views/Home"
 import LoginPhone from "./views/user/LoginPhone"
 import Account from "./views/user/Account"
 import Study from "./views/Study"
+import Search from "./views/user/Search"
 import {
   BrowserRouter as Router,
   Route,
@@ -22,6 +23,7 @@ function App() {
                 <Route path={"/loginPhone"} component={LoginPhone}></Route>
                 <Route path={"/account"} component={Account}></Route>
                 <Route path={"/study"} component={Study}></Route>
+                <Route path={"/search"} component={Search}></Route>
 
                 <Route path={"/"} component={Home}></Route>             
           </Switch>
