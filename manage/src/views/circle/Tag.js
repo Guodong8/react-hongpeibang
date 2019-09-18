@@ -4,6 +4,7 @@ import Daren from "../../components/daren"
 import Follow from "../../components/follow"
 import  News from "../../components/news"
 
+
 export default class  Tag extends React.Component {
     constructor(props){
         super(props);
@@ -34,8 +35,9 @@ function MyDiv(props) {
             <div style={{display:props.index===0?"block":"none"}}><Follow></Follow></div>
             <div style={{display:props.index===1?"block":"none"}}><News></News></div>
             <div style={{display:props.index===2?"block":"none"}}><Daren></Daren></div>
-          
+         
         </div>
+         
     )
 }
 function MyBtn(props) {
@@ -54,6 +56,7 @@ function MyBtn(props) {
            
             </div>
             </div>
+           
     )
 }
 // ReactDOM.render((
