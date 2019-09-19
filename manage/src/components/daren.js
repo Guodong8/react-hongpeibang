@@ -16,10 +16,10 @@ class Daren extends React.Component{
  
           
             <div className="main" style={{top:'2.75rem',bottom:'3.125rem '}}>
-                   <div className="admincontentwrap">
+                   <div className="admincontentwrap" >
                    {
                        content.map((item)=>(
-                        <div style={{marginbottom:'0.625rem'}} key={item.clientId}>
+                        <div style={{marginbottom:'0.625rem'}} key={item.contentId}>
                         <div className="admincontent">
                             <div className="admininformation">
                                 <div className="adminhead">
