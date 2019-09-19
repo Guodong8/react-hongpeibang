@@ -9,24 +9,21 @@ class News extends React.Component {
     constructor(){
         super()
        this.state={
-           content:[]
+           content:[],
+           canList:[]
        }
     }   
     render(){
-
-        const content = this.state.content
+       
+        const content = this.state.content;
+        const canList= this.state.canList
     return (
 
 
         <div id="wrap">
-
-
-           
-
-            <div className="main" style={{ top: '2.75rem', bottom: '3.125rem' }}>
-
-                <div className="lunbowrap">
-                    <div className="lunbo" style={{ width: '30.5625rem' }}>
+           <div className="main" style={{ top: '2.75rem', bottom: '3.125rem' }}>
+              <div className="lunbowrap">
+                 <div className="lunbo" style={{ width: '30.5625rem' }}>
                         <div className="lunbotu" style={{ padding: '0rem  0rem 0rem 0.9375rem' }}>
                             <img alt="" title="" src={require('../asset/img/lunbotu1.jpg')} className="worksiconfont"
                                 style={{ background: 'none', width: '9.375rem', height: '5.3438rem' }}></img></div>
@@ -41,20 +38,24 @@ class News extends React.Component {
 
                 {/* <!--餐品类--> */}
                 <div className="canpinwrap">
-                    <div className="canpin">
+               
+                  
+                        
+                    <div className="canpin" > 
+                     
                         <div className="canpinList" style={{ width: '77.8125rem' }}>
-                            <div className="canlist" style={{ backgroundColor: '#94BFBB' }}>#早餐#</div>
-                            <div className="canlist" style={{ backgroundColor: '#927472' }}>#午餐#</div>
-                            <div className="canlist" style={{ backgroundColor: '#E5AA9C' }}>#晚餐#</div>
-                            <div className="canlist" style={{ backgroundColor: '#5BADA6' }}>#下午茶#</div>
-                            <div className="canlist" style={{ backgroundColor: '#b78b9f' }}>#夜宵#</div>
-                            <div className="canlist" style={{ backgroundColor: '#acbcc9' }}>#ACA交作业#</div>
-                            <div className="canlist" style={{ backgroundColor: '#8f7671' }}>#外面吃去#</div>
-                            <div className="canlist" style={{ backgroundColor: '#acb99b' }}>#外貌协会#</div>
-                            <div className="canlist" style={{ backgroundColor: '#aca6bb' }}>#做失败了#</div>
-                            <div className="canlist" style={{ backgroundColor: '#c3d0ad' }}>#东菱吃好早餐#</div>
+                             {
+                                  canList.map((item)=>(
+                            <div className="canlist" key={item.communityId} >
+                            {item.name}
+                            </div>
+                            
+
+                                 ))
+                }
                         </div>
                     </div>
+                     
                 </div>
                 {/* <!--内容--> */}
                 
@@ -62,12 +63,6 @@ class News extends React.Component {
                 {
                           content.map((item)=>(
                     <div  style={{ marginbottom: '0.625rem' }} key={item.contentId}>
-                       
-
-                          
-                        
-
-                        
                         <div className="admincontent">
                             <div className="admininformation">
                                 <div className="adminhead">
@@ -140,28 +135,24 @@ class News extends React.Component {
         
         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
     )
     }
     async componentDidMount(){
         
         const {data} = await axios.get(`/hpb/v2/feed/getNew?pageIndex=0&pageSize=10`);
-        console.log(data);
+        // console.log(data);
         this.setState({
             content:data.data.content
         })
-        console.log(this.state.content)
+        // console.log(this.state.content)
+       
+        const data2 = await axios.get(`/hpb/community/getByLimit?isShow=4&pageIndex=0&pageSize=10`);
+        console.log(data2);
+        this.setState({
+            canList:data2.data.data.data
+        })
+        console.log(this.state.canList)
+
     }
 
 }

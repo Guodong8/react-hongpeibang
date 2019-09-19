@@ -18,6 +18,7 @@ body {
     left: 0;
     right: 0;
     margin: 0 auto;
+    width: 100%;
 }
 .navigation {
     background: #FFFFFF;
@@ -170,6 +171,7 @@ background-color: #E98B71;
 
 .canlist:first-child {
     margin-left: 0.9375rem;
+    background-color:#94BFBB
 }
 
 .canlist {
