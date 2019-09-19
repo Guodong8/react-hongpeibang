@@ -7,8 +7,31 @@ body {
     height: 100%;
 }
 
-
-
+body {
+    margin: 0 auto;
+    background: #F5F7F9;
+}
+.wrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.navigation {
+    background: #FFFFFF;
+    height: 2.75rem;
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 1.125rem;
+    margin: 0 auto;
+    max-width: 37.5rem;
+    box-sizing: border-box;
+}
  .iconfont {
     font-size: 0;
     height: 2.75rem;
