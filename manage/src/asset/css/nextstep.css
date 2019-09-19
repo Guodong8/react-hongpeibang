@@ -1,0 +1,26 @@
+.nextstep{
+  z-index: 1;
+  height: 2.75rem;
+  background: #fff;
+  display: flex;
+  justify-content:space-between;
+  align-items: center
+
+}
+.nextstep span:nth-child(1){
+  
+  margin-left: 1.25rem;
+  font-size: 1rem;
+  color: #E98B71
+}
+.nextstep span:nth-child(1) img{width:1.6875rem;
+  height: 1.6875rem;
+ 
+ }
+.nextstep span:nth-child(2){
+  
+  margin-right: 1.25rem;
+  font-size: 1rem;
+  color: #E98B71
+}
+

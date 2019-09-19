@@ -1,9 +1,16 @@
 import React from "react"
-import "../../asset/css/news.css"
 
+import {
+    Route,
+    Link,
+    NavLink
+} from "react-router-dom"
 class News extends React.Component{
     
-   
+    constructor(){
+        super()
+    }
+    
     render(){
         return(
           
@@ -15,13 +22,18 @@ class News extends React.Component{
                     <img alt="" title="" src={require('../../asset/img/add.jpg')}className="iiconfont"/></span>
                 <span className="iconfont" style={{float:'right'}}>
                     <img alt="" title="" src={require('../../asset/img/remind.jpg')}className="iiconfont"/></span>
-                <div className="toptext">
-                    <div className="alltext"><span>关注</span></div>
-                    <div className="alltext active"><span>最新</span>
-                        <div className="underline"></div>
-                    </div>
-                    <div className="alltext"><span>达人</span></div>
-                </div>
+
+                    <div className="toptext">
+
+<div className="alltext"><span>关注</span></div>
+ <div className="alltext active"><span>最新</span>
+     <div className="underline"></div>
+ </div>
+
+
+  <div className="alltext"  ><span>达人</span></div>
+                                                       
+</div>
             </div>
             
             
@@ -60,7 +72,7 @@ class News extends React.Component{
                 </div>
                 {/* <!--内容--> */}
                 <div className="admincontentwrap">
-                    <div style={{marginbottom:'0.625rem'}}>
+                    <div style={{marginBottom:'0.625rem'}}>
                         <div className="admincontent">
                             <div className="admininformation">
                                 <div className="adminhead">
@@ -76,7 +88,7 @@ class News extends React.Component{
                                 <div className="admindescribe"><span>11分钟前</span><span className="adminworks">南瓜蒸蛋糕</span></div>
                             </div>
                             <div className="conversation"><span className="conversationtext">#下午茶#</span><span></span></div>
-                            <div style={{marginbottom:'0.6875rem'}}>
+                            <div style={{marginBottom:'0.6875rem'}}>
                                 <div className="workscontentwrap">
                                     <div className="workscontent" style={{width:'100%',height:'18.75rem'}}><img alt="" title=""
                                             src={require('../../asset/img/works.jpg')}
@@ -84,7 +96,7 @@ class News extends React.Component{
                                     </div><a className="worksshade2 worksshade" href="/dish/14728398"></a>
                                 </div>
                             </div>
-                            <div style={{marginbottom:'0.9375rem',padding:'0 0.9375rem'}}>
+                            <div style={{marginBottom:'0.9375rem',padding:'0 0.9375rem'}}>
                                 <div className="worksintroduce">
                                     <img alt="" title=""
                                         src={require('../../asset/img/smallworks.jpg')}
@@ -141,7 +153,6 @@ class News extends React.Component{
             
         }
     }
-
+    
 
 export default News
-  

@@ -1,0 +1,25 @@
+.navwrap{
+  /* position: fixed;
+      top:2.75rem;
+      left: 0;
+      right: 0; */
+  
+}
+.Mynav{width: 100%;
+  height: 2.75rem;
+  color: #ccc;
+  display: flex;
+  justify-content:space-around;
+  background: #fff;
+  position: fixed;
+  top:2.75rem;
+  left: 0;
+  right: 0;
+  z-index:1;
+
+}
+.Mynav .mylink{font-size: 0.875rem;
+   color: #999999;
+    line-height: 2.75rem;
+  }
+  

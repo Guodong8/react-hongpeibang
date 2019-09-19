@@ -9,25 +9,25 @@ body {
             overflow: hidden;
         }
         .contentwrap {
-    padding-bottom: 50px;
+    padding-bottom: 3.125rem;
     background-color: #FFFFFF;
 }
 .navigation {
     background: #FFFFFF;
-    height: 44px;
+    height: 2.75rem;
     z-index: 6;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    padding: 0 18px;
+    padding: 0 1.125rem;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 37.5rem;
     box-sizing: border-box;
 }
 .navigationi {
     font-size: 0;
-    height: 44px;
+    height: 2.75rem;
     display: inline-block;
     cursor: pointer;
     text-align: center;
@@ -35,12 +35,12 @@ body {
     z-index: 1;
 }
 .navigationimg {
-    width: 27px;
-    height: 27px;
-    margin: 9.5px 0;
+    width: 1.6875rem;
+    height: 1.6875rem;
+    margin: 0.5938rem 0;
 }
 .navigationcontent {
-    height: 44px;
+    height: 2.75rem;
     overflow: hidden;
     zoom: 1;
 }
@@ -49,14 +49,14 @@ body {
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    margin-bottom: 140px;
+    margin-bottom: 8.75rem;
 }
 .maincontent {
-    padding: 15px 0;
-    margin: 0 15px;
+    padding: 0.9375rem 0;
+    margin: 0 0.9375rem;
     border-top-color: #F5F7F9;
     border-top-style: solid;
-    border-top-width: 1px;
+    border-top-width: 0.0625rem;
 }
 .maincontent:first-child {
     border-top-color: #FFF;
@@ -67,17 +67,17 @@ body {
     display: flex;
     border-top-color: #F5F7F9;
     border-top-style: solid;
-    border-top-width: 1px;
+    border-top-width: 0.0625rem;
 }
 .mainview:first-child {
     border-top-color: #FFF;
 }
 .maintext {
     flex: 1;
-    margin-left: 15px;
-    margin-top: 5px;
-    font-size: 16px;
-    line-height: 22.5px;
+    margin-left: 0.9375rem;
+    margin-top: 0.3125rem;
+    font-size: 1rem;
+    line-height: 1.4063rem;
     color: #313131;
 }
 
@@ -89,18 +89,18 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    max-width: 600px;
+    max-width: 37.5rem;
     cursor: pointer;
 }
 .download {
     position: absolute;
     bottom: 0;
     width: 100%;
-    max-width: 600px;
+    max-width: 37.5rem;
 }
 .downloadimg {
     width: 100%;
-    max-width: 600px;
+    max-width: 37.5rem;
     position: absolute;
     bottom: 0;
     left: 0;

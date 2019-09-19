@@ -1,7 +1,7 @@
 import React from "react"
 import "../../src/asset/css/baking.css"
 import "../asset/iconfont/iconfont.css"
-import Home from "./Home";
+
 class Study extends React.Component{
   render(){
       return(
@@ -55,21 +55,21 @@ class Study extends React.Component{
                     <div className="Content">
                         <img alt="" title="" 
                         src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width:'160px', height: '224px'}}/>
+                         className="Contentimg" style={{background: 'none', width:'10rem', height: '14rem'}}/>
                         <div className="Islearning"><span>1000+</span><span>在学</span></div>
                         <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
                     </div>
                     <div className="Content">
                         <img alt="" title="" 
                         src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '160px', height: '224px'}}/>
+                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>
                         <div className="Islearning"><span>1000+</span><span>在学</span></div>
                         <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
                     </div>
                     <div className="Content">
                         <img alt="" title="" 
                         src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '160px', height: '224px'}}/>                        
+                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>                        
                          <div className="Islearning"><span>1000+</span><span>在学</span></div>
                         <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
                     </div>
@@ -85,21 +85,21 @@ class Study extends React.Component{
                     <div className="Content">
                         <img alt="" title="" 
                         src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '160px', height: '224px'}}/>
+                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>
                         <div className="Islearning"><span>1000+</span><span>在学</span></div>
                         <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
                     </div>
                     <div className="Content">
                         <img alt="" title="" 
                         src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '160px', height: '224px'}}/>
+                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>
                         <div className="Islearning"><span>1000+</span><span>在学</span></div>
                         <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
                     </div>
                     <div className="Content">
                         <img alt="" title="" 
                         src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '160px', height: '224px'}}/>
+                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>
                         <div className="Islearning"><span>1000+</span><span>在学</span></div>
                         <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
                     </div>
@@ -114,14 +114,14 @@ class Study extends React.Component{
                     <div className="Content">
                         <img alt="" title="" 
                         src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '160px', height: '224px'}}/>
+                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>
                         <div className="Islearning"><span>1000+</span><span>在学</span></div>
                         <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
                     </div>
                     <div className="Content">
                         <img alt="" title="" 
                         src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '160px', height: '224px'}}/>
+                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>
                         <div className="Islearning"><span>1000+</span><span>在学</span></div>
                         <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
                     </div>
@@ -137,21 +137,21 @@ class Study extends React.Component{
                     <div className="Content">
                         <img alt="" title="" 
                         src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '160px', height: '224px'}}/>
+                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>
                         <div className="Islearning"><span>1000+</span><span>在学</span></div>
                         <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
                     </div>
                     <div className="Content">
                         <img alt="" title="" 
                         src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '160px', height: '224px'}}/>
+                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>
                         <div className="Islearning"><span>1000+</span><span>在学</span></div>
                         <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
                     </div>
                     <div className="Content">
                         <img alt="" title="" 
                         src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '160px', height: '224px'}}/>
+                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>
                         <div className="Islearning"><span>1000+</span><span>在学</span></div>
                         <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
                     </div>
@@ -166,7 +166,7 @@ class Study extends React.Component{
                     <div className="Content">
                         <img alt="" title="" 
                         src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '160px', height: '224px'}}/>
+                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>
                         <div className="Islearning"><span>1000+</span><span>在学</span></div>
                         <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
                     </div>
@@ -182,7 +182,7 @@ class Study extends React.Component{
                     <div className="Content">
                         <img alt="" title="" 
                         src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '160px', height: '224px'}}/>
+                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>
                         <div className="Islearning"><span>1000+</span><span>在学</span></div>
                         <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
                     </div>
@@ -192,7 +192,7 @@ class Study extends React.Component{
             </div>
             
         </section>
-        <Home></Home>
+      
         
     </div>
     

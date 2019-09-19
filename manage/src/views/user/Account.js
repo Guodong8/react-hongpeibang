@@ -10,6 +10,9 @@ class Account extends React.Component{
     goLoginPhone(){
         this.props.history.push("/loginPhone")
     }
+    loginOut(){
+        this.props.history.push("/login")
+    }   
     render(){
         return(
             <div className="account">
@@ -51,7 +54,10 @@ class Account extends React.Component{
                         </li>
                     </ul>
                 </div>
-                <button className="logout">退出登录</button>
+                
+                <div className="exit-login">
+                    <button className="logout" onClick={this.loginOut.bind(this)}>退出登录</button>
+                </div>
             </div>
         )
     }
