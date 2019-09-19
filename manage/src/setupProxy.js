@@ -8,13 +8,7 @@ module.exports = function (app) {
                 "^/hpb":""
             }
     }))
-    app.use("/hongbeibang",proxy({
-        target:"https://api.hongbeibang.com",
-        changeOrigin:true,
-        pathRewrite:{
-            "^/hongbeibang":""
-        }
-}))
+
     app.use("/w",proxy({
         target:"http://127.0.0.1",
         changeOrigin:true,
@@ -22,4 +16,5 @@ module.exports = function (app) {
             "^/w":""
         }
     }))
+
 }
