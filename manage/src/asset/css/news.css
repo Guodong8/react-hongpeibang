@@ -134,6 +134,7 @@ background-color: #E98B71;
     margin: 0;
     overflow: hidden;
     height: 100%;
+    height: 200px;
 }
 
 .canlist:first-child {

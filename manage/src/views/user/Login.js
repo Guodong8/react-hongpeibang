@@ -15,7 +15,9 @@ class Login extends React.Component{
         return(
             <div className="login">
                 <div className="login-header">
-                    <span className="iconfont icon-icon_left" onClick={this.goBack.bind(this)}></span>
+                    <span onClick={this.goBack.bind(this)}>
+                        <img src="https://image.hongbeibang.com/FlqyNFosCk9hhyBMoPkej9xbh_Yf?imageView2/1/w/50/h/50"></img>
+                    </span>
                     <b>登录</b>
                     <span></span>
                 </div>
