@@ -1,51 +1,79 @@
 import React from "react"
 import "../../asset/css/search.css"
 import axios from "axios"
+import SearchList from "../../components/SearchList"
+import SearchDetail from "../../components/SearchDetail"
 
 class Search extends React.Component{
     constructor(){
         super()
        this.state={
-           searchList:[]
+           searchList:[],
+           keyword:'',
+           visible:true,
+           searchContent:[],
+           searchHistory:[]
        }
+    
     }   
     goback(){
-        this.props.history.go(-1)
+        
+       if(this.state.visible){
+            this.props.history.go(-1)
+       }else{
+           this.setState({
+            visible:true
+
+        })
+       }
+        
     }
- 
+    changeSearch(e){
+        this.setState({
+            keyword:e.target.value
+        })
+       
+    }
+    clearSearch(){  
+        this.setState({
+            searchHistory:[]
+        })   
+    }
+   async shopSearch(key){
+        const keyword= this.state.keyword || key;  
+        const {data} = await axios.get(`/hpb/search/getMoreRecipe?_t=1568817963544&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1NzkzNTMzOCwiaWF0IjoxNTY4NTQ2NTM4fQ.bvDr9GLJ1HfbxJSyYBXAvHgc2q-rPDEMuHZ_FgwYbqo&pageIndex=0&pageSize=10&keyword=${keyword}`)      
+
+        this.setState({
+            searchContent:data.data.search.list.recipe.data,
+            visible:false,
+            searchHistory: this.state.searchHistory.concat(key)
+        })
+    }
     render(){
-        const searchList = this.state.searchList
+        
         return(
-            <div className="search">
+            <div className="search-1">
                 <div className="search-head">
                     <span>
-                        <img src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48"></img>
+                        <img src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48" onClick={this.goback.bind(this)}></img>
                     </span>
-                    <input type="text" placeholder="搜索食谱/食材，烘焙/家常菜一应俱全"></input>
-                    <span>搜索</span>
+                    <input type="text" placeholder="搜索食谱/食材，烘焙/家常菜一应俱全" onChange={this.changeSearch.bind(this)}></input>
+                    <span onClick={this.shopSearch.bind(this)}>搜索</span>
+                    
                 </div>
-                <div className="search-hot">
-                    <p>热门搜索</p>
-                </div>
-                <div className="search-lis">
-                      {
-                        searchList.map((item)=>(
-                            <span key={item.popularSearchId} className="search-li">
-                                {item.keyword}
-                            </span>
-                        ))
-                    }
-                </div>              
+                {
+                    (this.state.visible?
+                    <SearchList 
+                    handle={this.shopSearch.bind(this)} 
+                    searchHistory={this.state.searchHistory}
+                    clearSh =  {this.clearSearch.bind(this)} >
+                    </SearchList>:
+                    <SearchDetail searchContent={this.state.searchContent}></SearchDetail>)
+                }
+
             </div>
         )
     }
- async componentDidMount(){
-        const {data} = await axios.get(`/hpb/keyword/detail?_t=1568786276704&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1NzY3MDMxNywiaWF0IjoxNTY4MjgxNTE3fQ.T13b4XrBzIgx5zaDHuS-aEB4zMGfW__uZNsTQldFu7c`);
-        console.log(data);
-        this.setState({
-            searchList:data.data.popularSearch
-        })
-        console.log(this.state.searchList)
-    }
+
 }
 export default Search

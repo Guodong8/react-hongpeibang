@@ -1,6 +1,6 @@
-.search{
+.search-1{
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     background: #ffffff;
 }
 .search-head{
@@ -12,6 +12,8 @@
     color: #4A4945;
     font-size: 1.125rem;
     background: #ffffff;
+    z-index: 6;
+
 }
 .search-head img{
     width: 1.6875rem;
@@ -27,7 +29,7 @@ font-size: 1rem;
 .search-head input{
     width: 15rem;
     background: #F5F7F9;
-padding: 0.3125rem 0.625rem;
+padding: 4px 10px;
 box-sizing: border-box;
 line-height: 1.5625rem;
 color: #4A4945;
@@ -38,6 +40,10 @@ border: none;
 }
 .search-hot{
     margin: 0.9375rem;
+    font-size: 14px;
+line-height: 20px;
+color: #999999;
+overflow: hidden;
 }
 .search-lis{
     margin: 0 15px;
@@ -64,4 +70,47 @@ display: inline-block;
 vertical-align: middle;
 overflow: hidden;
 text-overflow: ellipsis;
+}
+.searchDetail img{
+    width: 125px;
+    height: 90px;
+    
+border-radius: 4px;
+}
+.searchDetail{
+background: #FFFFFF;
+position: relative;
+padding: 0 15px 2.5px 15px;
+overflow: hidden;
+display: flex;
+margin-bottom: 6px;
+
+
+}
+.searchDetail-1{
+    width: 200px;
+    height: 90px;
+    margin-left: 20px;
+}
+.searchDetail-1 h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+.searchDetail-2 p{
+    font-size: 11px;
+    color: #4A4945;
+    margin-top: 4px;
+}
+.search-history1 {
+    margin: 0.9375rem;
+    font-size: 14px;
+line-height: 20px;
+color: #999999;
+overflow: hidden;
+display: flex;
+justify-content: space-between;
+
+}
+.search-history1 img{
+    width: 20px;
 }
