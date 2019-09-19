@@ -18,13 +18,15 @@ class Home extends React.Component{
     render(){
         return(
             <div className="footer">
+                 <Route path={"/user"} component={User}></Route>
+                 <Route path={"/study"} component={Study}></Route>  
                         <Route path={"/"}exact component={Study}></Route>
    
 
                         <Route path={"/circle"}  component={Tag}></Route>
 
                         <Route path={"/questions"} component={Questions}></Route>
-                        <Route path={"/user"} component={User}></Route>
+                       
                 <nav className="foot">
                      <NavLink to={"/study"} exact activeStyle={{color:"green"}}>
                          <img src="https://image.hongbeibang.com/FsxN7RUFRJ9Zdris5Z22haR2xIhj?50X50&imageView2/1/w/50/h/50"></img>

@@ -1,13 +1,14 @@
 .foot{
     background-color: #FFFFFF;
 height: 3.0625rem;
-position: fixed;
+
 bottom: 0rem;
 left: 0rem;
 right: 0rem;
 margin: 0 auto;
 padding: 0;
 width: 100%;
+position: absolute
 }
 .foot a{
     width: 25%;
