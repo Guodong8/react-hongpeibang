@@ -7,7 +7,7 @@ class SearchList extends React.Component{
         this.state={
             searchList:[],
             searchHistory:[],
-            isShow:true
+            isShow:true,       
         }      
     }
     sendkeyword(key){
@@ -62,9 +62,12 @@ class SearchList extends React.Component{
     async componentDidMount(){
         const {data} = await axios.get(`/hpb/keyword/detail?_t=1568786276704&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1NzY3MDMxNywiaWF0IjoxNTY4MjgxNTE3fQ.T13b4XrBzIgx5zaDHuS-aEB4zMGfW__uZNsTQldFu7c`);
         
+        
         this.setState({ 
-            searchList:data.data.popularSearch
+            searchList:data.data.popularSearch,
+            
         })
+        
         
     }
 }

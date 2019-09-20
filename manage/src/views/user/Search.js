@@ -12,7 +12,9 @@ class Search extends React.Component{
            keyword:'',
            visible:true,
            searchContent:[],
-           searchHistory:[]
+           searchHistory:[],
+           searchMost:[],
+           searchExpert:[]
        }
     
     }   
@@ -41,13 +43,20 @@ class Search extends React.Component{
     }
    async shopSearch(key){
         const keyword= this.state.keyword || key;  
-        const {data} = await axios.get(`/hpb/search/getMoreRecipe?_t=1568817963544&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1NzkzNTMzOCwiaWF0IjoxNTY4NTQ2NTM4fQ.bvDr9GLJ1HfbxJSyYBXAvHgc2q-rPDEMuHZ_FgwYbqo&pageIndex=0&pageSize=10&keyword=${keyword}`)      
+        const {data} = await axios.get(`/hpb/search/getMoreRecipe?_t=1568817963544&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1NzkzNTMzOCwiaWF0IjoxNTY4NTQ2NTM4fQ.bvDr9GLJ1HfbxJSyYBXAvHgc2q-rPDEMuHZ_FgwYbqo&pageIndex=0&pageSize=10&keyword=${keyword}&sort=master`)      
 
+        const searchMost = await axios.get(`/hpb/search/getMoreRecipe?_t=1568959340449&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1ODMyOTg3OCwiaWF0IjoxNTY4OTQxMDc4fQ.1o6tY2MTZm5_VNTm1IMj625Csh1NB_AN3DtTqSmuIF0&pageIndex=10&pageSize=10&keyword=${keyword}sort=dishNum`)
+        const searchExpert = await axios.get(`/hpb/search/getMoreRecipe?_t=1568967580840&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1ODMyOTg3OCwiaWF0IjoxNTY4OTQxMDc4fQ.1o6tY2MTZm5_VNTm1IMj625Csh1NB_AN3DtTqSmuIF0&pageIndex=10&pageSize=10&keyword=${keyword}&sort=master`)
+        console.log(searchExpert);
         this.setState({
             searchContent:data.data.search.list.recipe.data,
+            searchMost:searchMost.data.data.search.list.recipe.data,
+            searchExpert:searchExpert.data.data.search.list.recipe.data,
             visible:false,
             searchHistory: this.state.searchHistory.concat(key)
         })
+        // console.log(this.state.searchContent);
+        console.log(this.state.searchMost)
     }
     render(){
         
@@ -59,8 +68,8 @@ class Search extends React.Component{
                     </span>
                     <input type="text" placeholder="搜索食谱/食材，烘焙/家常菜一应俱全" onChange={this.changeSearch.bind(this)}></input>
                     <span onClick={this.shopSearch.bind(this)}>搜索</span>
-                    
                 </div>
+                <div className="search-head1"></div>
                 {
                     (this.state.visible?
                     <SearchList 
@@ -68,7 +77,11 @@ class Search extends React.Component{
                     searchHistory={this.state.searchHistory}
                     clearSh =  {this.clearSearch.bind(this)} >
                     </SearchList>:
-                    <SearchDetail searchContent={this.state.searchContent}></SearchDetail>)
+                    <SearchDetail
+                     searchContent={this.state.searchContent}
+                     searchMost={this.state.searchMost}
+                     searchExpert={this.state.searchExpert}
+                     ></SearchDetail>)
                 }
 
             </div>

@@ -1,19 +1,23 @@
 .search-1{
     width: 100%;
-    /* height: 100%; */
     background: #ffffff;
 }
 .search-head{
-    width: 100%;
-    height: 2.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #4A4945;
-    font-size: 1.125rem;
-    background: #ffffff;
-    z-index: 6;
+    background: #FFFFFF;
+height: 44px;
+z-index: 6;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+padding: 0 18px;
+margin: 0 auto;
+max-width: 600px;
+box-sizing: border-box;
 
+}
+.search-head1{
+    height: 44px;
 }
 .search-head img{
     width: 1.6875rem;
@@ -95,6 +99,7 @@ margin-bottom: 6px;
 .searchDetail-1 h3{
     font-size: 18px;
     font-weight: bold;
+    color: #4A4945;
 }
 .searchDetail-2 p{
     font-size: 11px;
@@ -113,4 +118,43 @@ justify-content: space-between;
 }
 .search-history1 img{
     width: 20px;
+}
+.search-switchover{
+    position: fixed;
+left: 0;
+right: 0;
+z-index: 6;
+max-width: 600px;
+background-color: #FFFFFF;
+padding: 0;
+margin: 0 auto;
+overflow: hidden;
+zoom: 1;
+text-align: center;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+.search-switchover1{
+    height: 44px;
+}
+.search-switchover-com {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 65px;
+    line-height: 44px;
+    height: 34px;
+    font-size: 14px;
+    color: #999999;
+    margin-bottom: 10px; 
+    
+}
+
+.search-switchover-com.active {
+    color: #4A4945;
+    font-weight: bold;
+    border-bottom: 2px solid #E98B71;
 }

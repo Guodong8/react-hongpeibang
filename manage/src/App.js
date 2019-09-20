@@ -7,6 +7,7 @@ import Account from "./views/user/Account"
 import Register from "./views/user/Register"
 import Study from "./views/Study"
 import Search from "./views/user/Search"
+import DetailPages from "./views/user/DetailPages"
 import {
   BrowserRouter as Router,
   Route,
@@ -24,8 +25,9 @@ function App() {
                 <Route path={"/loginPhone"} component={LoginPhone}></Route>
                 <Route path={"/register"} component={Register}></Route>
                 <Route path={"/account"} component={Account}></Route>
-               
+                
                 <Route path={"/search"} component={Search}></Route>
+                <Route path={"/detailPages/:id"} component={DetailPages}></Route>
 
                 <Route path={"/"} component={Home}></Route>    
                        
