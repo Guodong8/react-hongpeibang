@@ -1,5 +1,9 @@
 import React from "react"
 import axios from "axios"
+import Adminzj from "./adminzj"
+import {
+    Link
+} from 'react-router-dom'
 const request = require("request")
 request("https://api.hongbeibang.com/v2/feed/getNew?pageIndex=0&pageSize=10",function (err,response,body) {
 // console.log(response);//response是请求的相关信息 包括body.地址 域名等等 而body是情求回来的接口数据
@@ -9,13 +13,11 @@ class News extends React.Component {
     constructor(){
         super()
        this.state={
-           content:[],
            canList:[]
        }
     }   
+   
     render(){
-       
-        const content = this.state.content;
         const canList= this.state.canList
     return (
 
@@ -44,108 +46,32 @@ class News extends React.Component {
                     <div className="canpin" > 
                      
                         <div className="canpinList" style={{ width: '77.8125rem' }}>
+                             
                              {
                                   canList.map((item)=>(
+                                  <Link to={"/bakingCircle/"+item.communityId}>
                             <div className="canlist" key={item.communityId} >
                             {item.name}
                             </div>
-                            
-
+                           
+</Link>
                                  ))
                 }
+                 
                         </div>
                     </div>
                      
                 </div>
                 {/* <!--内容--> */}
-                
-                <div className="admincontentwrap" >
-                {
-                          content.map((item)=>(
-                    <div  style={{ marginbottom: '0.625rem' }} key={item.contentId}>
-                        <div className="admincontent">
-                            <div className="admininformation">
-                                <div className="adminhead">
-                                    <div className="adminheadimg"><img alt="" title=""
-                                        src={item.clientImage}
-                                        className="adminheadsmallimg" style={{ background: 'none', width: '2.375rem', height: '2.375rem' }} />
-                                    </div>
-                                </div>
-                                <div className="adminnamewrap">
-                                    <div className="adminname">{item.clientName}
-                                    </div>
-                                </div>
-                                <div className="admindescribe"><span>{item.createTime}</span><span className="adminworks">{item.coverTitle}</span></div>
-                            </div>
-                            <div className="conversation"><span className="conversationtext">{item.communityName}</span><span></span></div>
-                            <div style={{ marginbottom: '0.6875rem' }}>
-                                <div className="workscontentwrap">
-                                    <div className="workscontent" style={{ width: '100%', height: '18.75rem' }}><img alt="" title=""
-                                        src={item.image}
-                                        className="worksimg" style={{ background: 'none', width: '13.6875rem', height: '18.25rem' }} />
-                                    </div><a className="worksshade2 worksshade" href="/dish/14728398"></a>
-                                </div>
-                            </div>
-                            <div style={{ marginbottom: '0.9375rem', padding: '0 0.9375rem' }}>
-                                <div className="worksintroduce">
-                                    <img alt="" title=""
-                                        src={item.image}
-                                        className="workssmallimg" style={{ background: 'none', width: ' 4.375rem', height: '4.375rem' }} />
-                                    <div className="worksright">
-                                        <div className="worksname">{item.coverTitle}</div>
-                                        <div className="worksworker">{item.clientName}</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="worksread">{item.visitNum}人浏览</div>
-                            <div className="worksfooter">
-                                <div className="worksactions">
-                                    <div className="worksup"><img alt="" title=""
-                                        src={require('../asset/img/up.jpg')}
-                                        className="worksiconfont" /></div>
-                                    <div className="worksnum">{item.likeNum}
-                                    </div>
-                                </div>
-                                <div className="worksactions">
-                                    <div className="worksup"><img alt="" title=""
-                                        src={require('../asset/img/Reward.jpg')}
-                                        className="worksiconfont" /></div>
-                                    <div className="worksnum">{item.rewardNum} 
-                                    
-                                    </div>
-                                </div>
-                                <div className="worksactions">
-                                    <div className="worksup"><img alt="" title=""
-                                        src={require('../asset/img/talk.jpg')}
-                                        className="worksiconfont" /></div>
-                                    <div className="worksnum">{item.commentNum}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    ))
-                }
-                </div>
+
+                <Adminzj></Adminzj>
+
             </div>
-        
-        
-        
-        
         </div>
 
     )
     }
     async componentDidMount(){
-        
-        const {data} = await axios.get(`/hpb/v2/feed/getNew?pageIndex=0&pageSize=10`);
-        // console.log(data);
-        this.setState({
-            content:data.data.content
-        })
-        // console.log(this.state.content)
-       
         const data2 = await axios.get(`/hpb/community/getByLimit?isShow=4&pageIndex=0&pageSize=10`);
         console.log(data2);
         this.setState({
@@ -156,6 +82,5 @@ class News extends React.Component {
     }
 
 }
-
 
 export default News
