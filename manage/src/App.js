@@ -5,9 +5,9 @@ import Home from "./views/Home"
 import LoginPhone from "./views/user/LoginPhone"
 import Account from "./views/user/Account"
 import Register from "./views/user/Register"
-import Study from "./views/Study"
+
 import Search from "./views/user/Search"
-import Skill from './components/skill';
+import Skill from './views/study/skill';
 
 import quzi from "./views/ask/twrouter/Quiz"
 import nextstep from "./views/ask/twrouter/nextstep"

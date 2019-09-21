@@ -1,5 +1,5 @@
 import React from "react";
-import "../asset/css/skill.css";
+import "../../asset/css/skill.css";
 import axios from "axios";
 import {Router,Route,hashHistory} from "react-router"
 
