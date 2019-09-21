@@ -1,7 +1,5 @@
 import React from "react"
 
-import Daren from "../../components/daren"
-import Follow from "../../components/follow"
 import {
     Route,
     Link,
@@ -74,7 +72,7 @@ class News extends React.Component{
                 </div>
                 {/* <!--内容--> */}
                 <div className="admincontentwrap">
-                    <div style={{marginbottom:'0.625rem'}}>
+                    <div style={{marginBottom:'0.625rem'}}>
                         <div className="admincontent">
                             <div className="admininformation">
                                 <div className="adminhead">
@@ -90,7 +88,7 @@ class News extends React.Component{
                                 <div className="admindescribe"><span>11分钟前</span><span className="adminworks">南瓜蒸蛋糕</span></div>
                             </div>
                             <div className="conversation"><span className="conversationtext">#下午茶#</span><span></span></div>
-                            <div style={{marginbottom:'0.6875rem'}}>
+                            <div style={{marginBottom:'0.6875rem'}}>
                                 <div className="workscontentwrap">
                                     <div className="workscontent" style={{width:'100%',height:'18.75rem'}}><img alt="" title=""
                                             src={require('../../asset/img/works.jpg')}
@@ -98,7 +96,7 @@ class News extends React.Component{
                                     </div><a className="worksshade2 worksshade" href="/dish/14728398"></a>
                                 </div>
                             </div>
-                            <div style={{marginbottom:'0.9375rem',padding:'0 0.9375rem'}}>
+                            <div style={{marginBottom:'0.9375rem',padding:'0 0.9375rem'}}>
                                 <div className="worksintroduce">
                                     <img alt="" title=""
                                         src={require('../../asset/img/smallworks.jpg')}

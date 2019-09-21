@@ -4,6 +4,7 @@ import Daren from "../../components/daren"
 import Follow from "../../components/follow"
 import  News from "../../components/news"
 
+
 export default class  Tag extends React.Component {
     constructor(props){
         super(props);
@@ -34,8 +35,9 @@ function MyDiv(props) {
             <div style={{display:props.index===0?"block":"none"}}><Follow></Follow></div>
             <div style={{display:props.index===1?"block":"none"}}><News></News></div>
             <div style={{display:props.index===2?"block":"none"}}><Daren></Daren></div>
-          
+         
         </div>
+         
     )
 }
 function MyBtn(props) {
@@ -48,12 +50,13 @@ function MyBtn(props) {
            <div className="toptext">
 
            <div  onClick={()=>props.changeIndex(0)  } className={props.index===0?"alltext active":"alltext"}><span>关注</span></div>
-            <div onClick={()=>props.changeIndex(1)  } className={props.index===1?"alltext active":"alltext"}><span>最新</span><div class="underline"></div> </div>
+            <div onClick={()=>props.changeIndex(1)  } className={props.index===1?"alltext active":"alltext"}><span>最新</span> </div>
             <div onClick={()=>props.changeIndex(2)  } className={props.index===2?"alltext active":"alltext"}><span>达人</span> </div>
                
            
             </div>
             </div>
+           
     )
 }
 // ReactDOM.render((
