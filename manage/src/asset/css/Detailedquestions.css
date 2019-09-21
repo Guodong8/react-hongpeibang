@@ -1,0 +1,244 @@
+.Detailedwrap{
+  background: #fff;
+}
+.Detailedwrap .DetailedTop{
+  background: #FFFFFF;
+  height: 2.75rem;
+  z-index: 6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 1.125rem;
+  margin: 0 auto;
+  max-width: 37.5rem;
+  box-sizing: border-box;
+}
+.Detailedwrap .DetailedTop span:nth-child(1){
+  font-size: 0;
+    height: 2.75rem;
+    float: left;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.Detailedwrap .DetailedTop span:nth-child(1) img{
+  width: 1.6875rem;
+    height: 1.6875rem;
+    margin: 0.5938rem 0;
+}
+.Detailedwrap .DetailedTop .scsize{
+  margin: 0.4375rem 0;
+    position: relative;
+    z-index: 1;
+    height: 1.875rem;
+    float: right;
+}
+.Detailedwrap .DetailedTop .scsize p{
+  background-color: #E98B71;
+    color: #FFFFFF;
+    border: 0.0625rem solid;
+    border-color: #E98B71;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    width: 3.75rem;
+    text-align: center;
+    line-height: 1.75rem;
+    cursor: pointer;
+}
+ .DetailedTitle{
+   margin-top: 2.75rem;
+  background-color: #FFFFFF;
+  padding: 0.625rem 0.9375rem;
+  letter-spacing: 0.0313rem;
+  overflow: hidden;
+  position: relative;
+  zoom: 1
+}
+ .DetailedTitle p{
+  color: #4A4945;
+    font-size: 1.125rem;
+    font-weight: bold;
+    line-height: 1.5625rem;
+    margin: 0 auto;
+    word-break: break-all;
+    text-overflow: ellipsis;
+}
+.Detailedwrap .xiangxi{
+  width: 21.5625rem;
+  margin: 0 auto;
+  position: relative;
+    overflow: hidden;
+    zoom: 1;
+    background-color: #F5F7F9;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 10px;
+   
+    
+}
+.Detailedwrap .xiangxi img{
+  width: 70px;
+  height: 70px;
+}
+.Detailedwrap .xiangxi  .goodsname{
+  display: inline-flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+   
+}
+.Detailedwrap .xiangxi  .goodsname  h4{
+  font-size: 14px;
+    color: #313131;
+    font-weight: bold;
+    text-align: justify;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.Detailedwrap .xiangxi  .goodsname p{
+  margin-top: 5px;
+    font-size: 13px;
+    color: #999;
+    text-align: justify;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.Detailedwrap  .respond{
+  background-color: #F5F7F9;
+
+  color: #999999;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    padding: 0.625rem 0.9375rem;
+}
+.Detailedwrap  .respondlist{
+  background-color: #FFFFFF;
+    padding: 0.625rem 0.9375rem;
+    /* margin: 0 auto 0.625rem 0; */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.Detailedwrap  .respondlist .headPortrait{
+  float: left;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  margin-right: 0.625rem;
+    font-size: 0;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+   
+
+}
+.Detailedwrap  .respondlist .headPortrait img{
+  background: none;
+    width: 2.375rem;
+    height: 2.375rem;
+    border-radius: 50%;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 0.0625rem solid;
+    border-color: #E7E2E5;
+}
+.Detailedwrap  .respondlist .vipwrap{
+  height: 2.5rem;
+    overflow: hidden;
+    float: left;
+}
+.Detailedwrap  .respondlist .vipwrap .vipidentity{
+  width: 2.5rem;
+    height: 1.25rem;
+    float: left;
+    margin-top: -0.625rem;
+    margin-right: 0.3125rem;
+    font-size: 0;
+}
+.Detailedwrap  .respondlist .vipidentity img{
+  width: 100%;
+    overflow: hidden;
+}
+.Detailedwrap  .respondlist .vipwrap .vipName{
+  font-size: 0.8125rem;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    text-align: left;
+    color: #4A4945;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.Detailedwrap  .respondlist  .respondItem{
+  font-size: 0.75rem;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    color: #999999;
+    overflow: hidden;
+    clear: both;
+}
+.Detailedwrap  .commentcontent{
+  width: 18.4375rem;
+  margin-left: 3.125rem;
+  color: #4A4945;
+    font-size: 0.875rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    clear: both;
+}
+.Detailedwrap .comment{
+  float: right;
+    height: 1.1875rem;
+    font-size: 0;
+    margin-left: 0.625rem;
+    box-sizing: border-box;
+}
+.Detailedwrap .comment img{
+  width: 1.1875rem;
+    height: 1.1875rem;
+    font-size: 0;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 0.3125rem;
+}
+.Detailedwrap .comment .commentfont{
+  text-align: left;
+    font-size: 0.75rem;
+    color: #999999;
+    vertical-align: middle;
+    display: inline-block;
+}
+.Detailedwrap .zanwrap{
+  float: right;
+    height: 1.1875rem;
+    font-size: 0;
+    margin-left: 0.625rem;
+    box-sizing: border-box;
+}
+.Detailedwrap .zanwrap img{
+  width: 1.1875rem;
+    height: 1.1875rem;
+    font-size: 0;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 0.3125rem;
+}
+.Detailedwrap .zanwrap .zan{
+  text-align: left;
+    font-size: 0.75rem;
+    color: #999999;
+    vertical-align: middle;
+    display: inline-block;
+}

@@ -1,0 +1,118 @@
+.navys{
+  background: #FFFFFF
+}
+.rwtwrop{
+  width:345px;
+  position: relative;
+    overflow: hidden;
+    zoom: 1;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid;
+    border-bottom-color: #E7E2E5;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 15px 0 10px 0;
+}
+.rwtwrop .rwttitle{
+  margin: 0 auto 5px auto;
+    display: box;
+    display: -moz-box;
+    display: -webkit-box;
+    font-size: 18px;
+    font-weight: bold;
+    color: #4A4945;
+    line-height: 25px;
+    max-height: 50px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+
+}
+.rwtwrop .rwtcontent{
+  position: relative;
+    overflow: hidden;
+    zoom: 1;
+    background-color: #F5F7F9;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.rwtwrop .rwtcontent .rwtimg{
+  
+    width: 70px;
+    height: 70px;
+    display: inline-flex;
+    border-radius: 4px;
+}
+.rwtwrop .rwtcontent .productName{
+  display: inline-flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 15px;
+}
+.rwtwrop .rwtcontent p:nth-child(1){
+  font-size: 14px;
+    color: #313131;
+    font-weight: bold;
+    text-align: justify;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.rwtwrop .rwtcontent p:nth-child(2){
+  margin-top: 5px;
+  font-size: 13px;
+  color: #999;
+  text-align: justify;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.navys .answer{
+  width: 21.5625rem;
+  height: 1.25rem;
+  /* display: flex;
+  justify-content: space-between; */
+
+}
+.navys .answer .likenum{
+float: left;
+display: block;
+font-size: 0.875rem;
+line-height: 1.25rem;
+color: #999999;
+
+
+
+}
+
+.navys .answer .writeanswer{
+font-size: 0.875rem;
+  line-height: 1.25rem;
+  vertical-align: middle;
+  display: inline-block;
+  color: #E98B71;
+  float: right;
+ 
+  
+}
+.navys .answer .writeanswer .writeanswerimg{
+width: 1.1875rem;
+  height: 1.1875rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.3125rem;
+  font-size: 0;
+ 
+}
+
+

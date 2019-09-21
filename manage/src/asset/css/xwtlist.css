@@ -11,6 +11,7 @@
   padding: 0.9375rem 0rem 0.625rem 0rem;
 }
 .listtitie{
+  display: block;
   margin: 0 auto 0.3125rem 0.3125rem;
   font-size: 1.125rem;
   font-weight: bold;
@@ -83,6 +84,14 @@
   
 
 }
+.wtlist .answer .zwhd{
+  overflow: hidden;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #999999;
+    box-sizing: border-box;
+    color: #498DD0;
+}
 
 .wtlist .answer span:nth-child(2){
   font-size: 0.875rem;
@@ -95,12 +104,12 @@
     
 }
 .wtlist .answer span:nth-child(2) img{
-  width: 1.1875rem;
+  width:1.1875rem;
     height: 1.1875rem;
     display: inline-block;
     vertical-align: middle;
     margin-right: 0.3125rem;
-    font-size: 0;
+    /* font-size: 0; */
    
 }
 

@@ -1,3 +1,104 @@
 .navys{
-  margin-top: 5.5rem
+  margin-top: 5.5rem;
+  background-color: #FFFFFF;
+  
+}
+.navys .jhlist{
+  width: 21.5625rem;
+  position: relative;
+    overflow: hidden;
+    zoom: 1;
+    
+    border-bottom: 0.0625rem solid;
+    border-bottom-color: #E7E2E5;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0.625rem 0;
+} 
+
+.navys .imglist{
+  float: left;
+    width: 2.5rem;
+    height: 2.5rem;
+    /* padding: 0; */
+    margin-bottom:10px;
+    margin-right: 0.625rem;
+    float: left;
+    
+    padding: 0;
+    margin-right: 0.625rem;
+}
+.navys .imglist img{
+  background: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 0.0625rem solid;
+    border-color: #E7E2E5;
+}
+.navys .jhlist .viplist{
+  width: 18.4375rem;
+ height:2.5rem;
+  float: left;
+
+} 
+.navys .viplist span:nth-child(1){
+  display: inline-block;
+  height: 2.5rem;
+  width: 2.5rem;
+   float:left; 
+    margin-right: 0.3125rem;
+    font-size: 0;
+
+} 
+ .navys .viplist span:nth-child(1) img{ 
+   width: 100%; 
+   overflow: hidden;
+}
+.navys .viplist span:nth-child(2){
+display: inline-block;
+font-size: 0.8125rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: left;
+    color: #4A4945;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+} 
+.navys  .wtwrap{
+  width: 100%;
+  display: block;
+    margin: 0.625rem auto;
+    /* padding: 0; */
+    overflow: hidden;
+    position: relative;
+}
+.navys  .wtwrap .vipwt{
+  font-size: 18px;
+    font-weight: bold;
+    color: #4A4945;
+    line-height: 1.5625rem;
+    max-height: 3.125rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.navys  .wtwrap  .viphd{
+  font-size: 0.875rem;
+    color: #4A4945;
+    line-height: 1.25rem;
+    margin: 0.3125rem 0 0 0;
+    max-height: 3.75rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.navys .like{
+  overflow: hidden;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #999999;
+    box-sizing: border-box;
 }
