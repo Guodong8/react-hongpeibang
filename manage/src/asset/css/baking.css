@@ -141,6 +141,7 @@ nav {
     overflow: hidden;
     zoom: 1;
     background-color: #FFFFFF;
+    margin-top:3.75rem
 }
 
 .keji {
@@ -165,17 +166,18 @@ nav {
     font-size: 1rem;
 }
 
-nav ul {
+.nav ul {
     padding: 0rem;
     list-style: none;
 
     display: flex;
+    margin-top:60px;
 
 
 
 }
 
-nav ul li {
+.nav ul li {
     zoom: 1;
     text-align: center;
     margin: 0;
@@ -199,12 +201,12 @@ nav ul li {
     padding: 0.625rem 0;
 }
 
-nav ul li i {
+.nav ul li i {
     font-size: 2.8125rem;
 
 }
 
-nav li span {
+.nav li span {
     background: bisque;
     font-size: 0.75rem;
     color: #4A4945;

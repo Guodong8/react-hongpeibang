@@ -1,10 +1,21 @@
 import React from "react"
+import axios from "axios"
+// import Stcontent from "../components/stcontent"
 import "../../src/asset/css/baking.css"
 import "../asset/iconfont/iconfont.css"
+import Stcontent from "../components/stcontent"
 
 class Study extends React.Component{
+    constructor(){
+        super()
+        this.state={
+         
+        }
+    }
   render(){
+  
       return(
+        
 
         <div className="whole">
         <header>
@@ -23,175 +34,52 @@ class Study extends React.Component{
 
             </span>
         </header>
-        <nav>
 
-            <ul>
-                <li>
-                    <i className="iconfont icon-baike"></i>
-
-                    <span>科技百科</span>
-                </li>
-                <li>
-                    <i className="iconfont icon-shipinxuetang"></i>
-                    <span>视频学堂</span>
-                </li>
-                <li>
-                    <i className="iconfont icon-guide"></i>
-                    <span>新手教学</span>
-                    </li>
-                <li>
-                    <i className="iconfont icon-leimupinleifenleileibie "></i>
-                    <span>食谱分类</span>
-                </li>
-            </ul>
-
-        </nav>
-        <section>
-            <div className="recommend">
-                <div className="recommend1">推荐课程</div>
-            </div>
-            <div className="Recommended_courses">
-                <div className="Recommended_img">
-                    <div className="Content">
-                        <img alt="" title="" 
-                        src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width:'10rem', height: '14rem'}}/>
-                        <div className="Islearning"><span>1000+</span><span>在学</span></div>
-                        <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
-                    </div>
-                    <div className="Content">
-                        <img alt="" title="" 
-                        src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>
-                        <div className="Islearning"><span>1000+</span><span>在学</span></div>
-                        <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
-                    </div>
-                    <div className="Content">
-                        <img alt="" title="" 
-                        src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>                        
-                         <div className="Islearning"><span>1000+</span><span>在学</span></div>
-                        <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
-                    </div>
-
-                </div>
-            </div>
+        <div className="nav">
+       
+             
+        <div >
+             
+         
             
-            <div className="recommend">
-                <div className="recommend1">私房网红</div>
-            </div>
-            <div className="Recommended_courses">
-                <div className="Recommended_img">
-                    <div className="Content">
-                        <img alt="" title="" 
-                        src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>
-                        <div className="Islearning"><span>1000+</span><span>在学</span></div>
-                        <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
-                    </div>
-                    <div className="Content">
-                        <img alt="" title="" 
-                        src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>
-                        <div className="Islearning"><span>1000+</span><span>在学</span></div>
-                        <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
-                    </div>
-                    <div className="Content">
-                        <img alt="" title="" 
-                        src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>
-                        <div className="Islearning"><span>1000+</span><span>在学</span></div>
-                        <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
-                    </div>
+       
             
-                </div>
-            </div>
-                    <div className="recommend">
-                <div className="recommend1">应季必做</div>
-            </div>
-            <div className="Recommended_courses">
-                <div className="Recommended_img">
-                    <div className="Content">
-                        <img alt="" title="" 
-                        src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>
-                        <div className="Islearning"><span>1000+</span><span>在学</span></div>
-                        <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
-                    </div>
-                    <div className="Content">
-                        <img alt="" title="" 
-                        src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>
-                        <div className="Islearning"><span>1000+</span><span>在学</span></div>
-                        <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
-                    </div>
-                   
-            
-                </div>
-            </div>
-                    <div className="recommend">
-                <div className="recommend1">元气早餐</div>
-            </div>
-            <div className="Recommended_courses">
-                <div className="Recommended_img">
-                    <div className="Content">
-                        <img alt="" title="" 
-                        src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>
-                        <div className="Islearning"><span>1000+</span><span>在学</span></div>
-                        <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
-                    </div>
-                    <div className="Content">
-                        <img alt="" title="" 
-                        src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>
-                        <div className="Islearning"><span>1000+</span><span>在学</span></div>
-                        <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
-                    </div>
-                    <div className="Content">
-                        <img alt="" title="" 
-                        src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>
-                        <div className="Islearning"><span>1000+</span><span>在学</span></div>
-                        <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
-                    </div>
-            
-                </div>
-            </div>
-                    <div className="recommend">
-                <div className="recommend1">烘焙基础</div>
-            </div>
-            <div className="Recommended_courses">
-                <div className="Recommended_img">
-                    <div className="Content">
-                        <img alt="" title="" 
-                        src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>
-                        <div className="Islearning"><span>1000+</span><span>在学</span></div>
-                        <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
-                    </div>
-                    
-            
-                </div>
-            </div>
-                    <div className="recommend">
-                <div className="recommend1">技法专栏</div>
-            </div>
-            <div className="Recommended_courses">
-                <div className="Recommended_img">
-                    <div className="Content">
-                        <img alt="" title="" 
-                        src="https://image.hongbeibang.com/FrCefLvg0wAlT9VYDRtd-5cp9s-c?640X900&amp;imageView2/1/w/640/h/896"
-                         className="Contentimg" style={{background: 'none', width: '10rem', height: '14rem'}}/>
-                        <div className="Islearning"><span>1000+</span><span>在学</span></div>
-                        <div className="Contenttext">13款不甜腻不粘牙牛轧糖（熬糖版）</div>
-                    </div>
-                    
-            
-                </div>
-            </div>
-            
-        </section>
+       <ul >
+       <li >
+           <i className=""></i>
+           <img src="https://image.hongbeibang.com/Fp0nBR7-xD2caoLENB7qZgmu9vZT?80X80&imageView2/1/w/80/h/80"App-link></img>
+           <span>技巧百科</span>
+           </li>
+           
+           <li >
+           <i className="">
+           <img src="https://image.hongbeibang.com/Fl493FjRZluXqCNJnvhRYw_IGKZO?80X80&imageView2/1/w/80/h/80"></img>
+           </i>
+           
+           <span>视频学堂</span>
+           </li>
+           <li>
+           <i className=""> <img src="https://image.hongbeibang.com/FkU-5lDUu7y7CurjkdJYWh-ZIg3x?80X80&imageView2/1/w/80/h/80"></img></i>
+           
+           <span>新手课程</span>
+           </li>
+           <li>
+           <i className=""><img src="https://image.hongbeibang.com/FkcHmIr5rX7zXeHET_Rew64lVrgx?80X80&imageView2/1/w/80/h/80"></img></i>
+           
+           <span>食品分类</span>
+           </li>
+       </ul>
+     
+           
+      
+    
+    </div>
+          
+  
+        </div>
+        
+        
+     <Stcontent></Stcontent>
       
         
     </div>
@@ -201,6 +89,16 @@ class Study extends React.Component{
     
       )
   }
+  async componentDidMount(){
+        
+    const {data} = await axios.get(`/hpb/index/get?`);
+    console.log(data);
+    this.setState({
+        category:data.data.category[0].item
+    })
+    console.log(this.state.category)
+}
+
 
 
 }
