@@ -26,7 +26,7 @@ class Skill extends React.Component {
                         <div className="contentwrap" style={{ backgroundColor: '#fff' }}>
                             <div className="navigation"><span className="navigationi" style={{ float: 'left' }}><img alt="" title=""
                                 src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&amp;imageView2/1/w/48/h/48"
-                                className="navigationimg" onChange={this.backClick}></img></span></div>
+                                className="navigationimg" onClick={this.backClick.bind(this)}></img></span></div>
 
                         </div>
                         <div className="main">

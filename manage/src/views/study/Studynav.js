@@ -17,6 +17,12 @@ import Video from "./video"
 
 
 export default class Studynav extends React.Component{
+  constructor(props){
+    super(props)
+  }
+  goSkill(){
+    this.props.history.push("/skill")
+  }
   render(){
     return(
     <div className="nav">
@@ -26,7 +32,7 @@ export default class Studynav extends React.Component{
              <li>
              <NavLink className="icon" to={{pathname:"/skill"}} >
              <img src="https://image.hongbeibang.com/Fp0nBR7-xD2caoLENB7qZgmu9vZT?80X80&imageView2/1/w/80/h/80"></img></NavLink>
-             <span>技巧百科</span>
+             <span onClick={this.goSkill.bind(this)}>技巧百科</span>
              </li>
           
            
