@@ -171,12 +171,24 @@ nav {
     list-style: none;
 
     display: flex;
-    margin-top:60px;
+    margin-top:2.6rem;
+    
+    overflow: hidden;
+    zoom: 1;
+    background-color: #FFFFFF;
+
+  
 
 
 
 }
-
+.nav ul .daohangnav{
+    font-size: 0;
+    letter-spacing: 0.5px;
+    zoom: 1;
+    margin: 0;
+    background-color: #FFFFFF;
+}
 .nav ul li {
     zoom: 1;
     text-align: center;
@@ -203,21 +215,44 @@ nav {
 
 .nav ul li i {
     font-size: 2.8125rem;
+    width: 100%;
+    overflow: hidden;
 
+    
 }
+
+
 
 .nav li span {
     background: bisque;
     font-size: 0.75rem;
     color: #4A4945;
 
-    line-height: 1rem;
+    line-height: 0.75rem;
     vertical-align: middle;
     text-align: center;
 
 
 
 
+}
+.nav li i img {
+    width:2.8125rem;
+    height:2.8125rem;
+
+  
+    border:0;
+
+}
+.nav li{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    box-sizing: border-box;
+    width: 25%;
+    font-size: 0;
+    padding: 10px 0;
 }
 
 
