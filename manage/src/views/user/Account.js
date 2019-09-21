@@ -17,7 +17,9 @@ class Account extends React.Component{
         return(
             <div className="account">
                 <div className="account-header">
-                    <span className="iconfont icon-icon_left" onClick={this.goback.bind(this)}></span>
+                <span onClick={this.goback.bind(this)}>
+                        <img src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48"></img>
+                    </span>
                     <b>设置</b>
                     <span></span>
                 </div>

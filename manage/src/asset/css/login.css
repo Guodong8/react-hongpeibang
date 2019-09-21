@@ -12,6 +12,10 @@
     margin:0 0.625rem 0 0.625rem;
     width: 5rem;
 }
+.login-header img{
+    
+    width: 10px;
+}
 .login-header b{
     font-weight:bold;
 }

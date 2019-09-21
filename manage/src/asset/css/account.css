@@ -13,6 +13,10 @@
     width: 5rem;
     padding:0 0.625rem 0 0.625rem;
 }
+.account-header img{
+    width: 27px;
+    margin: 5px 0;
+}
 .account-header b{
     font-weight:bold;
 }

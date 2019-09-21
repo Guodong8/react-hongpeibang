@@ -18,6 +18,7 @@ body {
     left: 0;
     right: 0;
     margin: 0 auto;
+    width: 100%;
 }
 .navigation {
     background: #FFFFFF;
@@ -79,11 +80,14 @@ body {
     height: 2.75rem;
     font-size: 1rem;
     color: #999999;
+    
 }
 
 .alltext.active {
     color: #4A4945;
     font-weight: bold;
+    border-bottom:
+        0.0625rem solid chocolate;
 }
 .underline {
 width: 1.25rem;
@@ -168,9 +172,54 @@ background-color: #E98B71;
     height: 100%;
 }
 
-.canlist:first-child {
+.canpinList a:nth-child(1) div {
     margin-left: 0.9375rem;
+    background-color: #94BFBB;
 }
+
+.canpinList a:nth-child(2) div {
+    margin-left: 0.9375rem;
+    background-color: #927472;
+}
+.canpinList a:nth-child(3) div {
+    margin-left: 0.9375rem;
+    background-color: #E5AA9C;
+}
+.canpinList a:nth-child(4) div {
+    margin-left: 0.9375rem;
+    background-color: #5BADA6;
+}
+.canpinList a:nth-child(5) div {
+    margin-left: 0.9375rem;
+    background-color: #b78b9f;
+}
+.canpinList a:nth-child(6) div {
+    margin-left: 0.9375rem;
+    background-color: #acbcc9;
+}
+.canpinList a:nth-child(7) div {
+    margin-left: 0.9375rem;
+    background-color:#8f7671;
+}
+.canpinList a:nth-child(8) div {
+    margin-left: 0.9375rem;
+    background-color: #acb99b;
+}
+.canpinList a:nth-child(9) div {
+    margin-left: 0.9375rem;
+    background-color:#aca6bb;
+}
+.canpinList a:nth-child(10) div {
+    margin-left: 0.9375rem;
+    background-color:#c3d0ad
+}
+
+
+
+
+
+
+
 
 .canlist {
     font-size: 0.9375rem;

@@ -50,7 +50,7 @@ function MyBtn(props) {
            <div className="toptext">
 
            <div  onClick={()=>props.changeIndex(0)  } className={props.index===0?"alltext active":"alltext"}><span>关注</span></div>
-            <div onClick={()=>props.changeIndex(1)  } className={props.index===1?"alltext active":"alltext"}><span>最新</span><div className="underline"></div> </div>
+            <div onClick={()=>props.changeIndex(1)  } className={props.index===1?"alltext active":"alltext"}><span>最新</span> </div>
             <div onClick={()=>props.changeIndex(2)  } className={props.index===2?"alltext active":"alltext"}><span>达人</span> </div>
                
            
