@@ -1,0 +1,254 @@
+.topwrap{
+  width: 375px;
+  background: #FFFFFF;
+    height: 44px;
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 18px;
+    margin: 0 auto;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+.topwrap .fontgo{
+  float: left;
+  font-size: 0;
+    height: 44px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.topwrap .fontgo img{
+  width: 27px;
+    height: 27px;
+    margin: 9.5px 0;
+    border: 0;
+}
+.topwrap .topfont{
+  width: 100%;
+    height: 44px;
+    line-height: 44px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 90px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    color: #4A4945;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.detailedwrap .centenwrap{
+  top: 44px;
+  bottom: 49px;
+  padding-bottom: 100px;
+  position: absolute;
+    left: 0;
+    right: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+    overflow-y: scroll;
+}
+.detailedwrap .centenwrap .cententtitle{
+  text-decoration: underline;
+    background-color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 25px;
+    color: #4A4945;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.detailedwrap .centenwrap .userdetailed{
+  background-color: #FFFFFF;
+  font-size: 0;
+  margin: 10px auto;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+.detailedwrap .centenwrap .userdetailed .padd{
+  border-bottom: 1px solid;
+    border-bottom-color: #E7E2E5;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.detailedwrap .centenwrap .userdetailed .follow{
+  float: right;
+    margin: 5px 0;
+    width: 60px;
+    background-color: #FFFFFF;
+    color: #E98B71;
+    border: 1px solid;
+    border-color: #E98B71;
+    border-radius: 4px;
+    position: relative;
+    text-align: center;
+    font-size: 12px;
+    line-height: 28px;
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.detailedwrap .centenwrap .userdetailed .vipimgwrap{
+  width: 40px;
+    float: left;
+    font-size: 0;
+    margin-right: 10px;
+    font-size: 0;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+.detailedwrap .centenwrap .userdetailed .vipimgwrap img{
+  background: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-color: #E7E2E5;
+}
+.detailedwrap .centenwrap .userdetailed .vipNamewrap{
+  overflow: hidden;
+    height: 40px;
+    margin-right: 0;
+}
+.detailedwrap .centenwrap .userdetailed .vipNamewrap .vipxximg{
+  width: 40px;
+    height: 40px;
+    float: left;
+    margin-right: 5px;
+    font-size: 0;
+}
+.detailedwrap .centenwrap .userdetailed .vipNamewrap .vipxximg img{
+  width: 100%;
+    overflow: hidden;
+}
+.detailedwrap .centenwrap .userdetailed .vipNamewrap .vipName{
+  color: #4A4945;
+  font-size: 16px;
+  line-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.vipwt{
+  word-break: break-all;
+    color: #4A4945;
+    font-size: 16px;
+}
+.vipwt p{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.comment{
+  background-color: #FFFFFF;
+    height: 40px;
+    padding: 0 15px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+.comment .commentfont{
+  color: #4A4945;
+    font-weight: bold;
+    margin: 10px 0 4px 0;
+    position: relative;
+    text-align: left;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    line-height: 24px;
+    height: 26px;
+    font-size: 14px;
+}
+.comment .commentfont  .s9b31ec9{
+  width: 20px;
+  height: 2px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: #E98B71;
+}
+.vipcommentwrap{
+  margin: 0;
+    padding: 0 15px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #FFFFFF;
+    letter-spacing: 0.5px;
+    list-style-type: none;
+    overflow: hidden;
+    zoom: 1;
+}
+.vipcommentwrap .vipcomment{
+  position: relative;
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+  overflow: hidden;
+  zoom: 1;
+  border: none;
+}
+.vipcommentwrap .vipcomment .commentimg{
+  width: 35px !important;
+    height: 35px !important;
+    float: left;
+    margin-right: 10px;
+   
+    font-size: 0;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.vipcommentwrap .vipcomment .commentimg img{
+  width: 33px;
+    height: 33px;
+    background: none;
+    border-radius: 50%;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-color: #E7E2E5;
+}
+.commentName{
+  overflow: hidden;
+}
+.commentName p:nth-child(1){
+  font-size: 13px;
+    color: #4A4945;
+    line-height: 18.5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 5px;
+}
+.commentName p:nth-child(2){
+  font-size: 11px;
+    line-height: 15px;
+    color: #999;
+}
+.commentContent{
+  text-align: justify;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    color: #4A4945;
+    margin-top: 10px;
+    margin-right: 15px;
+    margin-left: 40.875px;
+    font-size: 15px;
+    line-height: 21px;
+}

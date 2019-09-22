@@ -1,36 +1,33 @@
 import React from "react";
 import axios from "axios";
-import  Questionbuttom  from "../questionbuttom"
 import "../../../asset/css/Detailedquestions.css";
 
 export default class Detailedquestions extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      Detailedxx: [],
-      Detailedvip:{},
-      Detailedtitle:[],
-      Detailedcount:[],
-    };
-  }
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     Detailedxx: [],
+  //     Detailedvip:{},
+  //     Detailedtitle:[],
+  //   };
+  // }
   render() {
-    const  {Detailedxx}=this.state;
-    const  {Detailedvip} = this.state;
-    const  {Detailedtitle}=this.state;
-    const {Detailedcount}=this.state;
+    // const  {Detailedxx}=this.state;
+    // const  {Detailedvip} = this.state;
+    // const  {Detailedtitle}=this.state;
     return (
       <div className="Detailedwrap">
-        <div className="DetailedTop">
+        {/* <div className="DetailedTop">
           <span onClick={() => {this.props.history.go(-1);}}>
             <img src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48" />
           </span>
           <div className="scsize">
             <p>收藏</p>
           </div>
-        </div>
+        </div> */}
                     {/*以下是商品问题内容  */}
 
-              <div className="DetailedTitle">
+              {/* <div className="DetailedTitle">
                  <p>{Detailedtitle.title}</p>
               </div>
               <div style={{background:"#fff"}}>
@@ -44,13 +41,13 @@ export default class Detailedquestions extends React.Component {
             <div></div>
               </div>
             <div style={{background:"#F5f7f9"}} >
-            <div className="respond">{Detailedcount.count}回答</div>
+            <div className="respond">{Detailedvip.state}回答</div>
             </div>
-           
+            */}
 
 
             {/* 以下是回答 */}
-            {
+            {/* {
               Detailedxx.map(v=>(
                 <div key={v.clientId}>
                 <div className="respondlist">
@@ -89,34 +86,34 @@ export default class Detailedquestions extends React.Component {
 
               ))
 
-            }
+            } */}
            
-            
-        <Questionbuttom></Questionbuttom>
+            title页面
+ 
       </div>
     );
   }
 
-  async componentDidMount() {
-    const contentId = this.props.match.params.id;
-    const clientId = this.props.match.params.a;
-    // console.log(contentId,clientId)
+//   async componentDidMount() {
+//     const contentId = this.props.match.params.id;
+//     const clientId = this.props.match.params.a;
+//     console.log(contentId,clientId)
 
-    const { data } = await axios.get(`/hpb/question/getQuestion?_t=1568950657650&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1NzkzNTMzOCwiaWF0IjoxNTY4NTQ2NTM4fQ.bvDr9GLJ1HfbxJSyYBXAvHgc2q-rPDEMuHZ_FgwYbqo&contentId=${contentId}`
-);
-const dataA=await axios.get(`/hpb/question/getAnswers?_t=1568980864957&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1NzkzNTMzOCwiaWF0IjoxNTY4NTQ2NTM4fQ.bvDr9GLJ1HfbxJSyYBXAvHgc2q-rPDEMuHZ_FgwYbqo&pageIndex=0&pageSize=10&contentId=${contentId}&clientId=${clientId}`)
-    // console.log(data);
-    this.setState({
-      Detailedvip: data.data.content.recipe,
-      Detailedtitle:data.data.content,
-      Detailedxx:dataA.data.data.content.answer.data,
-      Detailedcount:dataA.data.data.content.answer,
-    });
-    // console.log(this.state.Detailedvip);
-    // console.log(this.state.Detailedxx)
-    // console.log(dataA)
+//     const { data } = await axios.get(`/hpb/question/getQuestion?_t=1568950657650&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1NzkzNTMzOCwiaWF0IjoxNTY4NTQ2NTM4fQ.bvDr9GLJ1HfbxJSyYBXAvHgc2q-rPDEMuHZ_FgwYbqo&contentId=${contentId}`
+// );
+// const dataA=await axios.get(`/hpb/question/getAnswers?_t=1568980864957&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1NzkzNTMzOCwiaWF0IjoxNTY4NTQ2NTM4fQ.bvDr9GLJ1HfbxJSyYBXAvHgc2q-rPDEMuHZ_FgwYbqo&pageIndex=0&pageSize=10&contentId=${contentId}&clientId=${clientId}`)
+//     // console.log(data);
+//     this.setState({
+//       Detailedvip: data.data.content.recipe,
+//       Detailedtitle:data.data.content,
+//       Detailedxx:dataA.data.data.content.answer.data
 
-  }
+//     });
+//     // console.log(this.state.Detailedvip);
+//     // console.log(this.state.Detailedxx)
+//     console.log(dataA)
+
+  // }
 
   
 }

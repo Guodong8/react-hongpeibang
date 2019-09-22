@@ -11,7 +11,7 @@ import Search from "./views/user/Search"
 import quzi from "./views/ask/twrouter/Quiz"
 import nextstep from "./views/ask/twrouter/nextstep"
 import Detailedquestions from "./views/ask/zxwt/Detailedquestions"
-
+import Detailedanswer from "./views/ask/detailedanswer"
 import Baking from "./components/Baking.js"
 
 import {
@@ -37,6 +37,7 @@ function App() {
                 <Route path={"/quzi"} component={quzi}></Route>
                 <Route path={"/nextstep"} component={nextstep}></Route>
                 <Route  path={"/detailedquestions/:id/:a"} component={Detailedquestions}></Route>
+                <Route path={"/detailedanswer/:b"} component={Detailedanswer}></Route>
                 <Route path={"/"} component={Home}></Route>             
 
              
