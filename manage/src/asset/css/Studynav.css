@@ -1,0 +1,92 @@
+ul,li{ padding:0;margin:0;list-style:none}
+nav {
+    margin: 0rem;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    zoom: 1;
+    background-color: #FFFFFF;
+    margin-top:3.75rem
+}
+.nav ul {
+    padding: 0rem;
+    list-style: none;
+
+    display: flex;
+    flex-direction:row;
+    margin-top:2.6rem;
+    
+    overflow: hidden;
+    zoom: 1;
+    background-color: #FFFFFF;
+
+  
+
+
+
+}
+.nav ul .daohangnav{
+    font-size: 0;
+    letter-spacing: 0.5px;
+    zoom: 1;
+    margin: 0;
+    background-color: #FFFFFF;
+    width:100%
+
+    
+}
+.nav ul li {
+    
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    box-sizing: border-box;
+    width: 25%;
+    font-size: 0;
+    padding: 0.1rem 0.21rem;
+    
+}
+.icon{
+    display: block;
+    font-size: 2.8125rem;
+    width: 100%;
+    overflow: hidden;
+    
+
+    
+}
+
+
+
+.nav li span {
+    
+    font-size: 0.75rem;
+    color: #4A4945;
+
+    line-height: 0.75rem;
+    vertical-align: middle;
+    text-align: center;
+
+
+
+
+}
+.icon img {
+    width:2.8125rem;
+    height:2.8125rem;
+
+  
+    border:0;
+
+}
+.nav li{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    box-sizing: border-box;
+    width: 25%;
+    font-size: 0;
+    padding: 10px 0;
+}

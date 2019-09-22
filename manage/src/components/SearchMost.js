@@ -17,8 +17,6 @@ class SearchMost extends React.Component{
         console.log(searchContent);
         return (
             searchContent.map((item)=>(
-                
-                <div className="searchDetail" key={item.contentId}>
                     <Link to={"/detailPages/"+item.contentId} className="searchDetail">
                         
                         <img src={item.image}></img>
@@ -31,11 +29,10 @@ class SearchMost extends React.Component{
                             
                         </div>
                     </Link>
-                    
-                   
-                </div>
+                
             ))
         )
     }
 }
 export default SearchMost;
+
