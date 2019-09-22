@@ -11,7 +11,7 @@ body {
     margin: 0 auto;
     background: #F5F7F9;
 }
-.wrap {
+.newswrap {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -99,7 +99,7 @@ background-color: #E98B71;
 
 
 /*中间*/
-.main {
+.mainn {
     position: absolute;
     left: 0;
     right: 0;

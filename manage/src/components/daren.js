@@ -15,7 +15,7 @@ class Daren extends React.Component{
         return(
  
           
-            <div className="main" style={{top:'2.75rem',bottom:'3.125rem '}}>
+            <div className="mainn" style={{top:'2.75rem',bottom:'3.125rem '}}>
                    <div className="admincontentwrap" >
                    {
                        content.map((item)=>(

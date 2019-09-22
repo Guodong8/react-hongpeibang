@@ -9,7 +9,8 @@ import "../asset/css/footer.css"
 
 import {
     Route,
-    NavLink
+    NavLink,
+    Redirect
 } from "react-router-dom"
 
 
@@ -20,7 +21,10 @@ class Home extends React.Component{
                  <Route path={"/user"} component={User}></Route>
                  <Route path={"/study"} component={Study}></Route>  
                         <Route path={"/"}exact component={Study}></Route>
+   
+
                         <Route path={"/circle"}  component={Tag}></Route>
+
                         <Route path={"/questions"} component={Questions}></Route>
                        
                 <nav className="foot">

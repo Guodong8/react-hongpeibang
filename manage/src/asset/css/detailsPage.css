@@ -1,0 +1,248 @@
+.detailsPage-head{
+    background: #FFFFFF;
+height: 44px;
+z-index: 6;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+padding: 0 18px;
+margin: 0 auto;
+max-width: 600px;
+box-sizing: border-box;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.detailsPage-head img{
+    width: 27px;
+    height: 27px;
+}
+.detailsPage-collect{
+    font-size: 14px;
+width: 70px;
+height: 30px;
+color: #E98B71;
+background-color: #fff;
+border-radius: 30px;
+cursor: pointer;
+border: 1px solid #E98B71;
+text-align: center;
+line-height: 28px;
+}
+.detailsPage-head1{
+    height: 44px;
+}
+.detailsPage-head2 img{
+    width:100%;
+}
+.detailsPage-content{
+    padding: 0 15px;
+margin: 0;
+overflow: hidden;
+position: relative;
+background: #FFFFFF;
+}
+.detailsPage-content p{
+    color: #313131;
+line-height: 27px;
+font-weight: 200;
+font-size: 17px;
+letter-spacing: 1px;
+text-align: justify;
+}
+
+.detailsPage-content h2{
+    color: #4A4945;
+line-height: 35px;
+font-size: 25px;
+font-weight: bold;
+word-wrap: break-word;
+position: relative;
+margin: 15px 0;
+}
+.detailsPage-author{
+    border-top: 1px solid #F1F1F1;
+    margin: 15px auto;
+    padding-top: 19px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.detailsPage-author img{
+    width: 33px;
+height: 33px;
+border-radius: 50%;
+}
+.detailsPage-author1 {
+    font-size: 14px;
+width: 70px;
+height: 30px;
+color: #fff;
+background-color: #E98B71;
+border-radius: 30px;
+cursor: pointer;
+border: 1px solid #E98B71;
+text-align: center;
+line-height: 28px;
+}
+.detailsPage-author2{
+    height: 55px;
+    background: #FFFFFF;
+}
+
+.detailsPage-food h1{
+    
+padding-top: 15px;
+font-size: 16px;
+line-height: 22.5px;
+color: #313131;
+font-weight: bold;
+}
+.detailsPage-deal{
+    margin: 15px auto;
+padding: 0;
+display: flex;
+align-items: center;
+}
+.detailsPage-material{
+    flex-direction: row;
+padding: 10px 0;
+overflow: hidden;
+
+
+}
+.detailsPage-recipe:first-child{
+    border-top: 1px solid #F1F1F1;
+}
+.detailsPage-recipe{
+    flex-direction: row;
+padding: 10px 0;
+overflow: hidden;
+border-bottom: 1px solid #F1F1F1;
+display: flex;
+justify-content: space-between;
+}
+.detailsPage-recipe span{
+    margin: 10px;
+}
+
+
+.detailsPage-step{
+    font-size: 0;
+padding: 15px 0;
+border-bottom: 1px solid #F1F1F1;
+
+box-sizing: border-box;
+overflow: hidden;
+}
+.detailsPage-step img{
+    width: 345px;
+height: 258.75px;
+margin: 15px auto 0 auto;
+border-radius: 4px;
+overflow: hidden;
+}
+.detailsPage-step h3{
+    position: relative;
+margin: 0 auto;
+padding: 0;
+font-size: 16px;
+color: #313131;
+font-weight: bold;
+line-height: 25px;
+overflow: hidden;
+}
+.detailsPage-step p{
+    color: #313131;
+font-size: 18px;
+line-height: 27px;
+margin-top: 15px;
+}
+.detailsPage-hint{
+    color: #313131;
+font-size: 18px;
+line-height: 27px;
+margin-top: 15px;
+}
+.detailsPage-hint h3{
+    position: relative;
+margin: 0 auto;
+padding: 0;
+font-size: 16px;
+color: #313131;
+font-weight: bold;
+line-height: 25px;
+overflow: hidden;
+}
+
+.detailsPage-hint p{
+    margin: 10px 0;
+}
+.detailsPage-dish{
+    margin-top: 10px;
+
+}
+.detailsPage-all{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+
+    background: #FFFFFF;
+}
+.detailsPage-all h1{
+   font-size: 14px;
+   font-weight: bold;
+   color: #313131;
+}
+.detailsPage-all p{
+    font-size: 14px;
+    color: #999;
+ }
+ .detailsPage-user img{
+    width: 146px;
+    height: 146px;
+ }
+ .detailsPage-user img:nth-child(2){
+    width: 17px;
+    height: 17px;
+    border: 1px solid #F1F1F1;
+    border-radius: 50%;
+ }
+ .detailsPage-user p img{
+    width: 18px;
+    height: 18px;
+    
+ }
+.detailsPage-usersbox{
+    position: relative;
+margin: 0 auto;
+z-index: 1;
+overflow-y: hidden;
+overflow-x: auto;
+}
+.detailsPage-users{
+    /* width: 1560px; */
+    overflow: hidden;
+padding: 0;
+margin: 0;
+    margin-left: 0px;
+position: relative;
+z-index: 1;
+margin-left: 4px;
+background: #FFFFFF;
+}
+ .detailsPage-user{
+    margin-bottom: 10px;
+    width: 146px;
+    height: 260px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    box-sizing: border-box;
+    border: 1px solid #F5F7F9;
+    background-color: #FFFFFF;
+    overflow: hidden;
+ }

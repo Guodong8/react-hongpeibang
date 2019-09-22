@@ -3,22 +3,27 @@ import axios from "axios"
 import Adminzj from "./adminzj"
 
 class Newbest extends React.Component{
-    constructor(){
-        super()
-        
+    constructor(props){
+        super(props)
+        this.state={
+            canList:[]
+        }
     } 
     render(){
+        console.log(8889,this.props.communityId)
         return(
-        <Adminzj></Adminzj>
+        <Adminzj canList={this.state.canList}></Adminzj>
         )
     }
     async componentDidMount(){
-        const data2 = await axios.get(`/hpb/community/getByLimit?isShow=4&pageIndex=0&pageSize=10`);
+        const communityId = this.props.communityId
+        const data2 = await axios.get(`/hpb/v2/feed/getNewByCommunity?pageIndex=0&pageSize=10&communityId=${communityId}`);
         console.log(data2);
         this.setState({
-            canList:data2.data.data.data
+            canList:data2.data.data.content
         })
-        console.log(this.state.canList)
+        
+      
 
     }
 }
