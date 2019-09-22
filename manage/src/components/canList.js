@@ -1,22 +1,34 @@
 import React from "react"
 import axios from "axios"
 import "../asset/css/canList.css"
-import CantotoList from "../views/circle/cantotolist"
+import "../asset/css/totolist.css"
+import Newbest from "../components/newbest"
+import Hotbest from "../components/hotbest"
+
 class canList extends React.Component{
     constructor(props){
         super(props)
        this.state={
-        community:[],
+        index:1,
+        communityC:[],
          
        }
     } 
+    changeIndex(index){
+      console.log(11111);
+      this.setState({
+          index
+      })
+  }
     goahead(){
         this.props.history.go(-1)
        }
     render(){
-        const community = this.state.community;
+      // const communityId = this.props.communityId
+      // console.log(6666,communityId)
+        const community = this.state.communityC;
       return(
-       <div className="wrap">
+       <div className="newswrap">
            <div>
              <div className="canListnav">
                <span className="goahead">
@@ -26,7 +38,12 @@ class canList extends React.Component{
              </div>  
              <div className="breakfoot"></div>
            </div>
-           <CantotoList></CantotoList>
+           {/* <CantotoList  community={this.props.community}></CantotoList> */}
+           <div>
+                <MyBtn index={this.state.index}  changeIndex={this.changeIndex.bind(this)}></MyBtn>
+                <MyDiv index={this.state.index} communityId={this.props.communityId}></MyDiv>
+
+            </div>
            
        </div>
 
@@ -34,5 +51,35 @@ class canList extends React.Component{
     
     }
  
+}
+function MyDiv(props) {
+  console.log(333,props.communityId)
+    
+  return (
+      <div className="one">
+          <div style={{display:props.index===0?"block":"none"}}><Hotbest communityId={props.communityId}></Hotbest></div>
+          <div style={{display:props.index===1?"block":"none"}}><Newbest communityId={props.communityId}></Newbest></div>
+       
+      </div>
+       
+  )
+}
+function MyBtn(props) {
+  return (
+         <div className="totolistwrap" >
+             <div className="totolistcontent">
+
+         <div id="totolistc" onClick={()=>props.changeIndex(0)  } className={props.index===0?"alltext active":"alltext"}><span>最热</span></div>
+          <div id="totolistc" onClick={()=>props.changeIndex(1)  } className={props.index===1?"alltext active":"alltext"}><span>最新</span> </div>
+
+             
+         
+         </div>
+         <div className="totolistcfoot">
+
+         </div>
+      </div>
+         
+  )
 }
 export default canList

@@ -1,6 +1,7 @@
 import React from "react"
 import axios from "axios"
 import Adminzj from "./adminzj"
+import Rotation from "./Rotation"
 import {
     Link
 } from 'react-router-dom'
@@ -13,6 +14,7 @@ class News extends React.Component {
     constructor(){
         super()
        this.state={
+           content:[],
            canList:[]
        }
     }   
@@ -22,21 +24,9 @@ class News extends React.Component {
     return (
 
 
-        <div id="wrap">
-           <div className="main" style={{ top: '2.75rem', bottom: '3.125rem' }}>
-              <div className="lunbowrap">
-                 <div className="lunbo" style={{ width: '30.5625rem' }}>
-                        <div className="lunbotu" style={{ padding: '0rem  0rem 0rem 0.9375rem' }}>
-                            <img alt="" title="" src={require('../asset/img/lunbotu1.jpg')} className="worksiconfont"
-                                style={{ background: 'none', width: '9.375rem', height: '5.3438rem' }}></img></div>
-                        <div className="lunbotu">
-                            <img alt="" title="" src={require('../asset/img/lunbotu2.jpg')} className="worksiconfont"
-                                style={{ background: 'none', width: '9.375rem', height: '5.3438rem' }} /></div>
-                        <div className="lunbotu">
-                            <img alt="" title="" src={require('../asset/img/lunbotu3.jpg')} className="worksiconfont"
-                                style={{ background: 'none', width: '9.375rem', height: '5.3438rem' }} /></div>
-                    </div>
-                </div>
+        <div id="newswrap">
+           <div className="mainn" style={{ top: '2.75rem', bottom: '3.125rem' }}>
+           <Rotation></Rotation>
 
                 {/* <!--餐品类--> */}
                 <div className="canpinwrap">
@@ -49,8 +39,8 @@ class News extends React.Component {
                              
                              {
                                   canList.map((item)=>(
-                                  <Link to={"/bakingCircle/"+item.communityId}>
-                            <div className="canlist" key={item.communityId} >
+                                  <Link to={"/bakingCircle/"+item.communityId} key={item.communityId}>
+                                      <div className="canlist" key={item.communityId} >
                             {item.name}
                             </div>
                            
@@ -64,7 +54,7 @@ class News extends React.Component {
                 </div>
                 {/* <!--内容--> */}
 
-                <Adminzj></Adminzj>
+                <Adminzj  canList={this.state.content}></Adminzj>
 
             </div>
         </div>
@@ -73,13 +63,28 @@ class News extends React.Component {
     }
     async componentDidMount(){
         const data2 = await axios.get(`/hpb/community/getByLimit?isShow=4&pageIndex=0&pageSize=10`);
-        console.log(data2);
+        console.log(data2); 
+        const {data} = await axios.get(`/hpb/v2/feed/getNew?pageIndex=0&pageSize=10`);
         this.setState({
-            canList:data2.data.data.data
+            canList:data2.data.data.data,
+            content:data.data.content
         })
         console.log(this.state.canList)
 
     }
+    // async componentDidMount(){
+        
+    //     const {data} = await axios.get(`/hpb/v2/feed/getNew?pageIndex=0&pageSize=10`);
+    //     // console.log(data);
+    //     this.setState({
+    //         content:data.data.content
+    //     })
+    //     // console.log(this.state.content)
+       
+       
+    
+    // }
+   
 
 }
 

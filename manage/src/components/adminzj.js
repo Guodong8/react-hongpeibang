@@ -11,7 +11,8 @@ class Adminzj extends React.Component {
     }   
     render(){
        
-        const content = this.state.content;
+        const content = this.props.canList;
+        console.log(999,this.props.canList)
      
     return (
 <div className="admincontentwrap" >
@@ -85,17 +86,6 @@ class Adminzj extends React.Component {
 </div>
     )
 }
-async componentDidMount(){
-        
-    const {data} = await axios.get(`/hpb/v2/feed/getNew?pageIndex=0&pageSize=10`);
-    // console.log(data);
-    this.setState({
-        content:data.data.content
-    })
-    // console.log(this.state.content)
-   
-   
 
-}
 }
 export default Adminzj

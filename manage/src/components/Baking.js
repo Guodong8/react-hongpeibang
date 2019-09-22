@@ -6,14 +6,14 @@ class Baking extends React.Component{
     constructor(){
         super()
         this.state={
-            community:[],
+            communityB:[],
             community2:[]
         }
     }   
    
     render(){
         return(
-            <CanList community={this.state.community}></CanList>
+            <CanList communityId={this.props.match.params.communityId}></CanList>
 
            
 
