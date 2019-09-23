@@ -43,7 +43,7 @@ function App() {
                 <Route path={"/bakingCircle/:communityId"} component={Baking}></Route>
                 <Route path={"/search"} component={Search}></Route>
                 <Route path={"/skill"} component={Skill}></Route>
-                <Route path={"/"} component={Home}></Route>    
+                 
                 <Route path={"/quzi"} component={quzi}></Route>
                 <Route path={"/nextstep"} component={nextstep}></Route>
                 <Route  path={"/detailedquestions/:id/:a"} component={Detailedquestions}></Route>
