@@ -12,7 +12,7 @@ class Adminzj extends React.Component {
     render(){
        
         const content = this.props.canList;
-        console.log(999,this.props.canList)
+        console.log(999,content.length)
      
     return (
 <div className="admincontentwrap" >
@@ -33,13 +33,32 @@ class Adminzj extends React.Component {
                 </div>
                 <div className="admindescribe"><span>{item.createTime}</span><span className="adminworks">{item.coverTitle}</span></div>
             </div>
-            <div className="conversation"><span className="conversationtext">{item.communityName}</span><span></span></div>
+            <div className="conversation">
+                <span className="conversationtext">{item.communityName}</span>
+                <span>{item.introduce}</span></div>
             <div style={{ marginbottom: '0.6875rem' }}>
                 <div className="workscontentwrap">
-                    <div className="workscontent" style={{ width: '100%', height: '18.75rem' }}>
-                        <Zmage alt="" title="" src={item.image}
-                        className="worksimg" style={{ background: 'none', width: '13.6875rem', height: '18.25rem' }} />
-                    </div><a className="worksshade2 worksshade" href="/dish/14728398"></a>
+
+                    
+                {
+                             item.image.map((itam)=>(
+
+                               
+                               
+                    <div className="workscontent"  style={{ 
+                        
+                        width: '100%', height: '18.75rem' }}>
+                        
+                                  <Zmage alt="" title="" src={itam}   className="worksimg" style={{ background: 'none', width: '13.6875rem', height: '18.25rem' }} />
+                           
+                       
+                       
+                    </div>
+                   
+                     ))
+                    }
+                    <a className="worksshade2 worksshade" href="/dish/14728398"></a>
+                     
                 </div>
             </div>
             <div style={{ marginbottom: '0.9375rem', padding: '0 0.9375rem' }}>

@@ -1,7 +1,6 @@
 import React from "react"
 import axios from "axios"
 import Adminzj from "./adminzj"
-import Rotation from "./Rotation"
 import {
     Link
 } from 'react-router-dom'
@@ -15,18 +14,38 @@ class News extends React.Component {
         super()
        this.state={
            content:[],
-           canList:[]
+           canList:[],
+           cancategory:[]
        }
     }   
    
     render(){
         const canList= this.state.canList
+        const cancategory = this.state.cancategory
     return (
 
 
         <div id="newswrap">
            <div className="mainn" style={{ top: '2.75rem', bottom: '3.125rem' }}>
-           <Rotation></Rotation>
+           <div className="lunbowrap">
+                 <div className="lunbo" style={{ width: '30.5625rem' }} >
+                 {
+                                  cancategory.map((itam)=>(
+                                  <Link to={"/activity/"+itam.activityContentId} key={itam.activityContentId}>
+                                     
+                            
+                        
+
+                                
+                        <div className="lunbotu" style={{ padding: '0rem  0rem 0rem 0.9375rem' }}  key={itam.activityContentId}>
+                            <img alt="" title="" src={itam.image} className="worksiconfont"
+                                style={{ background: 'none', width: '9.375rem', height: '5.3438rem' }}></img>
+                                </div>
+                       </Link>
+                                ))
+                            }  
+                    </div>
+                </div> 
 
                 {/* <!--餐品类--> */}
                 <div className="canpinwrap">
@@ -65,11 +84,14 @@ class News extends React.Component {
         const data2 = await axios.get(`/hpb/community/getByLimit?isShow=4&pageIndex=0&pageSize=10`);
         console.log(data2); 
         const {data} = await axios.get(`/hpb/v2/feed/getNew?pageIndex=0&pageSize=10`);
+        const data3 = await axios.get(`/hpb/feed/getCategory?`);
+        console.log(123,data3)
         this.setState({
             canList:data2.data.data.data,
-            content:data.data.content
+            content:data.data.content,
+            cancategory:data3.data.data.category[0].item
         })
-        console.log(this.state.canList)
+        console.log(7999,this.state.cancategory)
 
     }
     // async componentDidMount(){
