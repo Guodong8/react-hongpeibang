@@ -46,6 +46,7 @@ function App() {
                 <Route path={"/search/recipe/:keyword"} component={SearchRecipe}></Route>
                 <Route path={"/skill"} component={Skill}></Route>
                   
+                 
                 <Route path={"/quzi"} component={quzi}></Route>
                 <Route path={"/nextstep"} component={nextstep}></Route>
                 <Route  path={"/detailedquestions/:id/:a"} component={Detailedquestions}></Route>
