@@ -7,6 +7,7 @@ import Account from "./views/user/Account"
 import Register from "./views/user/Register"
 
 import Search from "./views/user/Search"
+import SearchRecipe from "./views/user/SearchRecipe"
 import DetailPages from "./views/user/DetailPages"
 import Skill from './views/study/skill';
 
@@ -41,16 +42,17 @@ function App() {
                 <Route path={"/detailPages/:id"} component={DetailPages}></Route>
 
                 <Route path={"/bakingCircle/:communityId"} component={Baking}></Route>
-                <Route path={"/search"} component={Search}></Route>
+                <Route path={"/search"} exact component={Search}></Route>
+                <Route path={"/search/recipe/:keyword"} component={SearchRecipe}></Route>
                 <Route path={"/skill"} component={Skill}></Route>
-                <Route path={"/"} component={Home}></Route>    
+                  
                 <Route path={"/quzi"} component={quzi}></Route>
                 <Route path={"/nextstep"} component={nextstep}></Route>
                 <Route  path={"/detailedquestions/:id/:a"} component={Detailedquestions}></Route>
                 <Route path={"/detailedanswer/:b"} component={Detailedanswer}></Route>
                 <Route path={"/"} component={Home}></Route>             
 
-             
+           
                        
           </Switch>
           

@@ -1,0 +1,48 @@
+.search-recipe1{
+    width: 100%;
+    background: #ffffff;
+}
+.search-recipe{
+    background: #FFFFFF;
+    height: 50px;
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 18px;
+    margin: 0 auto;
+    max-width: 600px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.search-head1{
+    height: 2.75rem;
+}
+.search-recipe img:first-child{
+    width: 27px;
+height: 27px;
+
+}
+.search-recipe span{
+    width: 60px;
+font-size: 16px;
+}
+.search-recipe img:last-child{
+    width: 19px;
+}
+.search-recipe input{
+    width: 220px;
+    background: #F5F7F9;
+padding: 6px 10px;
+box-sizing: border-box;
+line-height: 25px;
+color: #4A4945;
+font-size: 14px;
+border-radius: 4px;
+border: none;
+
+}
