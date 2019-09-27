@@ -1,0 +1,77 @@
+.buttomwarp{
+  position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 600px;
+    margin: auto;
+    height: 49px;
+    background-color: #FFFFFF;
+    border-top: 1px solid;
+    border-top-color: #E7E2E5;
+    z-index: 7;
+    box-sizing: border-box;
+}
+.buttomwarp .buttomleft{
+  width: 50%;
+    height: 47px;
+    text-align: center;
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+} 
+.buttomwarp .buttomleft .bottomcenten{
+  width: 1px;
+  height: 20px;
+  margin-top: 14px;
+  float: right;
+  background-color: #E7E2E5;
+}
+.buttomwarp .buttomleft  .leftimg{
+  font-size: 0;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+  
+}
+.buttomwarp .buttomleft  .leftimg img{
+  width: 100%;
+    overflow: hidden;
+}
+.buttomwarp .buttomleft  .leftfont{
+  font-size: 16px;
+  color: #999999;
+  line-height: 49px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.buttomwarp .bottomright{
+  width: 50%;
+  height: 49px;
+  text-align: center;
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.buttomwarp .bottomright .rightimg{
+  font-size: 0;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.buttomwarp .bottomright .rightimg img{
+  width: 100%;
+    overflow: hidden;
+}
+.buttomwarp .bottomright .rightfont{
+  font-size: 16px;
+    color: #999999;
+    line-height: 49px;
+    display: inline-block;
+    vertical-align: middle;
+}

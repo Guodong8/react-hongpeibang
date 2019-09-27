@@ -28,16 +28,18 @@ export default class Xwtlist extends React.Component{
             <div className="wtlist" key={v.contentQuestionId}>
              
              <NavLink className={"listtitie"} to={"/detailedquestions/" +v.contentId+"/"+v.clientId}>{v.coverTitle}</NavLink>
-            
-
-            <div className="xiangxi" key={v.recipe.clientId} >
+            {
+              v.recipe.clientId>0? <div className="xiangxi" key={v.recipe.clientId} >
               
-           <img src={v.recipe.image}></img>
-            <div className="goodsname">
-              <h4>{v.recipe.title}</h4>
-              <p>作者:{v.recipe.clientName}</p>
-            </div>
-            </div>
+              <img src={v.recipe.image}></img>
+               <div className="goodsname">
+                 <h4>{v.recipe.title}</h4>
+                 <p>作者:{v.recipe.clientName}</p>
+               </div>
+               </div>:""
+            }
+
+           
            
             <div className="answer">
               {

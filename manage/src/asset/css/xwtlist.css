@@ -1,5 +1,6 @@
 .wrap{
   background: #fff;
+  padding-top: 5.5rem;
 }
 .wtlist{
   overflow: hidden;
@@ -8,7 +9,7 @@
   margin: 0 auto;
   width: 21.5625rem;
   
-  padding: 0.9375rem 0rem 0.625rem 0rem;
+  padding: 15px 0px 10px 0px;
 }
 .listtitie{
   display: block;

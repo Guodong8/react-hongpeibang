@@ -1,6 +1,10 @@
 import React from "react"
-// import "../../asset/css/navys.css"
+import "../../asset/css/navys.css"
 import axios from "axios"
+import {
+  BrowserRouter as Router,
+  NavLink
+} from "react-router-dom"
 export default class jinghua extends React.Component{
   constructor(){
     super();
@@ -26,10 +30,10 @@ export default class jinghua extends React.Component{
               <span>{v.clientName}</span>
   
             </div>
-            <div className="wtwrap">
+            <NavLink className="wtwrap" to={"/detailedanswer/"+v.contentId} >
             <div className="vipwt"> {v.coverTitle}</div>
             <div className="viphd">{v.coverSummary}</div>
-            </div>
+            </NavLink>
             {
               v.hotNum>0?<div className="like">{v.hotNum}个赞</div>:<div className="like" >暂无点赞</div>
             }

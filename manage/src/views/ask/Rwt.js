@@ -1,6 +1,10 @@
 import React from "react"
 import "../../asset/css/rwt.css"
 import  axios  from  "axios"
+import {
+ 
+  NavLink
+} from "react-router-dom"
 export default class questioning extends React.Component{
   constructor(){
     super();
@@ -15,23 +19,27 @@ export default class questioning extends React.Component{
       <div className="navys">
         {
           rwtlist.map(v=>(
-<div className="rwtwrop" key={v.contentId}>
-          <div className="rwttitle">{v.title}</div>
-       <div className="rwtcontent">
-         
-           <img className="rwtimg" src={v.recipe.image}></img>
-         
-         <div className="productName">
-           <p>奶香绿豆糕</p>
-           <p>作者:{v.recipe.clientName}</p>
-         </div>
+    <div className="rwtwrop" key={v.contentId}>
+          {/* <div className="rwttitle">{v.title}</div> */}
+          <NavLink className={"rwttitle"} to={"/detailedquestions/" +v.contentId+"/"+v.clientId}>{v.title}</NavLink>
+    
+            <div className="rwtcontent"  key={v.recipe.clientId}>
         
-       </div>
+            <img className="rwtimg" src={v.recipe.image}></img>
+          
+          <div className="productName">
+            <p>{v.recipe.title}</p>
+            <p>作者:{v.recipe.clientName}</p>
+          </div>
+         
+        </div>
+          
+       
        <div className="answer">
-             {/* {
-                v.answerNum>0?<span>{v.answerNum}个赞</span>:<p >暂无点赞</p>
-             } */}
-             <span className="likenum">{v.answerNum}个赞</span>
+             {
+                v.answerNum>0?<span className="likenum">{v.answerNum}个赞</span>:<p >暂无点赞</p>
+             }
+             {/* <span className="likenum">{v.answerNum}个赞</span> */}
               <span className="writeanswer"><img className="writeanswerimg" src="https://image.hongbeibang.com/FlSZI5KwZLrR9-QXD9Vu7u0lVvCE?48X48&imageView2/1/w/40/h/40"></img>写答案</span>
   
             </div>
