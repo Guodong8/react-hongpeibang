@@ -50,7 +50,7 @@ function App() {
 
                 <Route path={"/bakingCircle/:communityId"} component={Baking}></Route>
                 <Route path={"/activity/:contentId"} component={Activity}></Route>
-                <Route path={"/search"} component={Search}></Route>
+               
                 <Route path={"/skill"} component={Skill}></Route>
                 <Route path={"/search"} exact component={Search}></Route>
                 <Route path={"/search/recipe/:keyword"} component={SearchRecipe}></Route>
