@@ -14,7 +14,8 @@ export default class detailedanswer extends React.Component{
     super();
     this.state={
       commentlist:[],
-      commentcount:[]
+      commentcount:[],
+      commentwt:[]
 
     }
   }
@@ -22,6 +23,7 @@ export default class detailedanswer extends React.Component{
   render(){
     const  {commentlist}=this.state;
     const {commentcount}=this.state;
+    const {commentwt}=this.state;
     
     return(
       
@@ -34,16 +36,16 @@ export default class detailedanswer extends React.Component{
                   <p className="topfont">回答</p>
              
             </div>
-            {
-                commentlist.map(v=>(
-                 
-            <div className="centenwrap" key={v.floorCommentContentId}>
-            <div className="cententtitle">{v.coverTitle}</div>
+           
+           
+            <div className="centenwrap">
+              
+            <div className="cententtitle">{commentwt.title}</div>
       <div className="userdetailed">
         <div className="padd">
           <div className="follow">+关注</div>
         <div className="vipimgwrap">
-          <img src={v.commentClientImage}></img>
+          <img src={commentwt.clientImage}></img>
 
         </div>
         <div className="vipNamewrap" >
@@ -51,25 +53,30 @@ export default class detailedanswer extends React.Component{
               <img src="https://image.hongbeibang.com/Fj1UT_HuSX4MkdcukYhWRpioEyWx?200X200&imageView2/1/w/80/h/80"></img>
 
             </div>
-            <div className="vipName">{v.commentClientName}</div>
+            <div className="vipName">{commentwt.clientName}</div>
         </div>
         </div>
         <div className="vipwt">
-          <p>{v.coverSummary}</p>
+          {commentwt.description}
         </div>
         
 
       </div>
-      <div className="comment">
+       <div className="comment">
         <div className="commentfont">
           <span>评论{commentcount.count}</span>
           <div className="s9b31ec9"></div>
         </div>
       </div>
+      {
+                commentlist.map(v=>(
+                  <div key={v.clientId}>
+
+     
       <div className="vipcommentwrap">
         <div className="vipcomment">
           <div className="commentimg">
-            <img src="https://image.hongbeibang.com/Fut2uwWW9tKJqk5ZSmfogW2lWTRJ?132X132&imageView2/1/w/132/h/132"></img>
+            <img src={v.clientImage}></img>
 
           </div>
           <div className="commentName">
@@ -88,9 +95,11 @@ export default class detailedanswer extends React.Component{
 
       </div>
       </div>
+           ))
+          }
+      </div>
             
-                ))
-            }
+           
            
 
           </div>
@@ -100,11 +109,15 @@ export default class detailedanswer extends React.Component{
   async componentDidMount(){
     const contentaId = this.props.match.params.b
     const {data}=await axios.get(`/hpb/comment/getFloor?_t=1569075193221&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1NzkzNTMzOCwiaWF0IjoxNTY4NTQ2NTM4fQ.bvDr9GLJ1HfbxJSyYBXAvHgc2q-rPDEMuHZ_FgwYbqo&pageIndex=0&pageSize=10&contentId=${contentaId}`)
-        // console.log(data)
+      
+        const shuju=await axios.get(`/hpb/question/getAnswer?_t=1569409869243&csrfToken=&contentId=${contentaId}`)
+        // console.log(shuju)
         this.setState({
           commentlist:data.data.data,
           commentcount:data.data,
+          commentwt:shuju.data.data.content,
         })
         console.log(this.state.commentlist)
+        // console.log(this.state.commentwt)
   }
 }

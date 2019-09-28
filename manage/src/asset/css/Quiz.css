@@ -1,3 +1,7 @@
+.dawrop{
+  background: #fff;
+  height: 100%;
+}
 .Quiz{
   z-index: 1;
   height: 2.75rem;
@@ -16,5 +20,83 @@
   font-size: 1rem;
   color: #E98B71
 }
+.inputtext{
+  padding: 9px 19px;
+  font-size: 16px;
+height: 40px;
+  line-height: 22px;
+width: 100%;
+box-sizing: border-box;
+color: #4A4945;
+border: none;
+outline: none;
+border-radius: 4px;
+}
+.inputwrap{
+  background-color: #fff;
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+max-width: 600px;
+margin: 0 auto;
+z-index: -1;
+}
+.tkwrap{
+  margin: 0 auto;
+padding: 0;
+text-align: center;
+list-style-type: none;
+color: #FFFFFF;
+font-size: 12px;
+position: fixed;
+top: 44px;
+left: 0;
+right: 0;
+z-index: 7;
+max-width: 600px;
+}
+/* .inputwrap{
+  opacity: 0;
+  transition: opacity 2s ease 0s;
+  background: #f96750;
+  padding: 10px 15px;
+  margin: 0;
+  border-bottom: 1px solid #f0f0f0;
+} */
+.tkuang{
+  /* opacity: 0; */
+  transition: opacity 2s ease 0s;
+  background: #f96750;
+  padding: 10px 15px;
+  margin: 0;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: center;
+}
+.tkuangwrop{
+  margin: 0 auto;
 
+padding: 0;
+
+text-align: center;
+
+list-style-type: none;
+
+color: #FFFFFF;
+
+font-size: 12px;
+
+position: fixed;
+
+top: 44px;
+
+left: 0;
+
+right: 0;
+
+z-index: 7;
+
+max-width: 600px;
+}
 

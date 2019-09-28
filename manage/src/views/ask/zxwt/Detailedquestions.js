@@ -2,6 +2,13 @@ import React from "react";
 import axios from "axios";
 import  Questionbuttom  from "../questionbuttom"
 import "../../../asset/css/Detailedquestions.css";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  NavLink
+} from "react-router-dom"
 
 export default class Detailedquestions extends React.Component {
   constructor() {
@@ -33,7 +40,7 @@ export default class Detailedquestions extends React.Component {
               <div className="DetailedTitle">
                  <p>{Detailedtitle.title}</p>
               </div>
-              <div style={{background:"#fff"}}>
+              <NavLink style={{background:"#fff"}} to={"/detailPages/"+Detailedvip.contentId}>  
               <div className="xiangxi">
                 <img src={Detailedvip.image}></img>
                 <div className="goodsname">
@@ -42,7 +49,7 @@ export default class Detailedquestions extends React.Component {
               </div>
             </div>
             <div></div>
-              </div>
+              </NavLink>
             <div style={{background:"#F5f7f9"}} >
             <div className="respond">{Detailedcount.count}回答</div>
             </div>
@@ -78,7 +85,7 @@ export default class Detailedquestions extends React.Component {
                       <div className="zan">点赞</div>
     
                     </div>
-                    <div className='comment'>
+                    <div className='commenta'>
                       <img src="https://image.hongbeibang.com/FiZ5-B7_rmV_gnPl97P-FkpjSlij?200X200&imageView2/1/w/38/h/38"></img>
                       <div className="commentfont">评论</div>
                     </div>
@@ -112,7 +119,7 @@ const dataA=await axios.get(`/hpb/question/getAnswers?_t=1568980864957&csrfToken
       Detailedxx:dataA.data.data.content.answer.data,
       Detailedcount:dataA.data.data.content.answer,
     });
-    // console.log(this.state.Detailedvip);
+    console.log(this.state.Detailedvip);
     // console.log(this.state.Detailedxx)
     // console.log(dataA)
 

@@ -11,12 +11,12 @@ class Baking extends React.Component{
     }   
     goahead(){
         this.props.history.go(-1)
-        console.log("llll")
+        
        }
     render(){
-        
+       
         return(
-            <CanList communityId={this.props.match.params.communityId} hanndler={this.goahead.bind(this)}></CanList>
+            <CanList communityId={this.props.match.params.communityId} hanndler={this.goahead.bind(this)} cancanList={this.state.community.name}></CanList>
 
            
 
@@ -26,11 +26,11 @@ class Baking extends React.Component{
     
         const communityId = this.props.match.params.communityId
         const community = await  this.$axios.get(`/hpb/v2/feed/getNewByCommunity?pageIndex=0&pageSize=30&communityId=${communityId}`);
-        console.log(community)
+   
         this.setState({
             community:community.data.data.community
         })
-        
+     
    
     }
 }

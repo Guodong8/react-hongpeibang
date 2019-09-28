@@ -33,7 +33,7 @@ class canList extends React.Component{
                <span className="goahead">
                <img onClick={this.props.hanndler} alt="" title="" src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&amp;imageView2/1/w/48/h/48" className="canListimg" />
                </span>
-               <ul className="breakfast" >#早餐#</ul>
+               <ul className="breakfast" >{this.props.cancanList}</ul>
              </div>  
              <div className="breakfoot"></div>
            </div>

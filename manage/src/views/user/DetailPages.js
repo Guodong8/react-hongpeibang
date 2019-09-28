@@ -115,7 +115,9 @@ class DetailPages extends React.Component{
     }
     async componentDidMount(){
         const contentid = this.props.match.params.id;
+        console.log(contentid)
         const {data} = await axios.get(`/hpb/recipe/get?_t=1569036190893&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1ODM1MzM5NSwiaWF0IjoxNTY4OTY0NTk1fQ.EuAdyOz13iwp498AbzPOdUC3SJ-0szLmC9Nhx61RptI&contentId=${contentid}&quantity=`);
+       console.log(data)
                 
         this.setState({ 
             detailsPage:data.data.recipe,

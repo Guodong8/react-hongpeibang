@@ -4,6 +4,7 @@ import Adminzj from "./adminzj"
 import {
     Link
 } from 'react-router-dom'
+import BScroll from "better-scroll"
 const request = require("request")
 request("https://api.hongbeibang.com/v2/feed/getNew?pageIndex=0&pageSize=10",function (err,response,body) {
 // console.log(response);//response是请求的相关信息 包括body.地址 域名等等 而body是情求回来的接口数据
@@ -100,9 +101,47 @@ class News extends React.Component {
             content:data.data.content,
             cancategory:data3.data.data.category[0].item
         })
-   
+        // let onScroll = new BScroll(".ra_ui-tab-content", {
+        //     click:true,
+        //     tap:true,
+        //     probeType: 2,
+        //     pullDownRefresh: {
+        //         threshold: 50,
+        //         stop: 20
+        //     },
+        //     //下拉刷新：可以配置顶部下拉的距离（threshold） 来决定刷新时机以及回弹停留的距离（stop）
+        //     //这个配置用于做上拉加载功能，默认为 false。当设置为 true 或者是一个 Object 的时候，可以开启上拉加载
+        //     pullUpLoad: {
+        //         threshold: 10
+        //     },
+        //     mouseWheel: {    // pc端同样能滑动
+        //         speed: 20,
+        //         invert: false
+        //     },
+        //     useTransition:false  // 防止iphone微信滑动卡顿
+        // });
+        // BScroll.prototype.me=this;
+        // onScroll.on("pullingDown",function(){
+        //     console.log("pullingDown");
+        //     this.me.props.getTrend.bind(this.me,1)();
+        //     onScroll.finishPullDown();//可以多次执行上拉刷新
+        // });
+        // onScroll.on("pullingUp",function(){
+        //     //alert('已到最底部');
+        //     pageSize++;
+        //     // console.log(page);
+        //     // console.log('加载ajax数据');
+        //     // console.log(this.me);
+        //     this.me.setState({
+        //         pageSize
+        //     });
+        //     this.me.props.getTrend.bind(this.me,pageSize)();
+        //     onScroll.finishPullUp();//可以多次执行上拉刷新
+        // });
+        // onScroll.refresh()
 
     }
+    
     // async componentDidMount(){
         
     //     const {data} = await axios.get(`/hpb/v2/feed/getNew?pageIndex=0&pageSize=10`);
