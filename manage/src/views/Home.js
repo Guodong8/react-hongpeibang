@@ -40,7 +40,7 @@ class Home extends React.Component{
                         <img src="https://image.hongbeibang.com/Flm_lYHJQA56h0VyhdRhQ1i5iO06?50X50&imageView2/1/w/50/h/50"></img>
                         <p>问答</p>
                         </NavLink>
-                    <NavLink to={"/user"}  activeStyle={{color:"green"}}>
+                    <NavLink to={localStorage.adminName?"/user":"/Login"}  activeStyle={{color:"green"}}>
                          <img src="https://image.hongbeibang.com/FrYeKj0MohOJQuNzUgCugg90cHCS?50X50&imageView2/1/w/50/h/50"></img>
                          <p>小窝</p>
                         </NavLink>

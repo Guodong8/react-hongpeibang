@@ -11,7 +11,8 @@ class Account extends React.Component{
         this.props.history.push("/loginPhone")
     }
     loginOut(){
-        this.props.history.push("/login")
+        this.props.history.push("/login");
+        localStorage.removeItem("adminName")
     }   
     render(){
         return(

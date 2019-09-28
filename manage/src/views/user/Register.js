@@ -1,6 +1,8 @@
 import React from "react"
 import "../../asset/css/register.css"
-import axios from "axios"
+import {  
+    NavLink,
+  } from "react-router-dom"
 class Register extends React.Component{
     constructor(){
         super()
@@ -12,15 +14,12 @@ class Register extends React.Component{
     goback(){
         this.props.history.go(-1)
     }
-   async submit(){
-        const adminName = this.state.adminName
-        const passWord = this.state.passWord
-      const {data} = await axios.post("/w/adminLogin",{
-          adminName,
-          passWord
-      })
-      console.log(data);
-    }
+//    async submit(){
+//         const adminName = this.state.adminName
+//         const passWord = this.state.passWord
+    
+     
+//     }
     usernameChange(e){
         this.setState({
             adminName:e.target.value
@@ -32,6 +31,7 @@ class Register extends React.Component{
         })
     }
     render(){
+       
         return(
             <div className="register">
                 <div className="register-header">
@@ -55,7 +55,8 @@ class Register extends React.Component{
                     </div>
                     <div className="forgetPassword">忘记密码?</div>
                     <div className="register-btn">
-                        <button onClick={this.submit.bind(this)}>注册</button>
+                        <NavLink to={{pathname:"/loginPhone",query:{adminName : this.state.adminName,passWord : this.state.passWord}}}><button >注册</button></NavLink>
+                       
                     
                     </div>
                 </div>
