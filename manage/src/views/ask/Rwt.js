@@ -27,10 +27,10 @@ export default class questioning extends React.Component{
         
             <img className="rwtimg" src={v.recipe.image}></img>
           
-          <div className="productName">
+          <NavLink className="productName" to={"/detailPages/"+v.recipeContentId} >
             <p>{v.recipe.title}</p>
             <p>作者:{v.recipe.clientName}</p>
-          </div>
+          </NavLink>
          
         </div>
           

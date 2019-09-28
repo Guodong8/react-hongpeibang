@@ -1,5 +1,5 @@
 .topwrap{
-  width: 375px;
+  
   background: #FFFFFF;
     height: 44px;
     z-index: 6;
@@ -7,7 +7,7 @@
     top: 0;
     left: 0;
     right: 0;
-    padding: 0 18px;
+    padding: 0 15px;
     margin: 0 auto;
     max-width: 600px;
     box-sizing: border-box;

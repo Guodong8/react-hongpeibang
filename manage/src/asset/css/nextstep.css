@@ -1,6 +1,6 @@
 .nextstep{
   z-index: 1;
-  height: 2.75rem;
+  height: 44px;
   background: #fff;
   display: flex;
   justify-content:space-between;
@@ -9,18 +9,311 @@
 }
 .nextstep span:nth-child(1){
   
-  margin-left: 1.25rem;
-  font-size: 1rem;
+  margin-left: 20px;
+  font-size: 16px;
   color: #E98B71
 }
-.nextstep span:nth-child(1) img{width:1.6875rem;
-  height: 1.6875rem;
+.nextstep span:nth-child(1) img{width:27px;
+  height: 27px;
  
  }
 .nextstep span:nth-child(2){
   
-  margin-right: 1.25rem;
-  font-size: 1rem;
+  margin-right: 20px;
+  font-size: 16px;
   color: #E98B71
+}
+.inputwrap{
+  background-color: #fff;
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+max-width: 37.5rem;
+margin: 0 auto;
+z-index: -1;
+}
+.inputtext{
+  padding: 0.5625rem 1.1875rem;
+  font-size: 1rem;
+height: 2.5rem;
+  line-height: 1.375rem;
+width: 100%;
+box-sizing: border-box;
+color: #4A4945;
+border: none;
+outline: none;
+border-radius: 0.25rem;
+}
+.tkfnwrap{
+  background-color: rgba(0,0,0,0.4);
+
+position: fixed;
+
+top: 0;
+
+bottom: 0;
+
+left: 0;
+
+right: 0;
+
+max-width: 37.5rem;
+
+margin: 0 auto;
+
+z-index: 8;
+
+text-align: center;
+}
+.tkfb{
+  position: relative;
+background-color: #FFFFFF;
+border-radius: 0.25rem;
+width: 88%;
+margin:11.25rem auto;
+
+min-height: 8.125rem;
+/* height: auto; */
+vertical-align: middle;
+max-width: 19.375rem;
+-webkit-box-shadow: 0rem 0.0625rem 0.1875rem rgba(0, 0, 0, .35);
+
+}
+.fbtitle{
+  color: #4A4945;
+font-size: 1.125rem;
+line-height: 1.5625rem;
+text-align: center;
+padding: 0.9375rem 0.625rem 0.625rem 0.625rem;
+font-weight: bold;
+/* width: 19.375rem; */
+}
+.fbimg{
+  width: 6.25rem;
+
+  height: 6.25rem;
+  
+  margin: 0 auto;
+  
+  overflow: hidden;
+}
+.fbimg img{
+  width: 100%;
+  overflow: hidden;
+}
+.fbtext{
+  color: #4A4945;
+
+font-size: 0.75rem;
+
+line-height: 1.125rem;
+
+text-align: center;
+
+margin: 1.25rem 0.6875rem 0.75rem 0.6875rem;
+}
+.fbtext p
+{
+  padding: 0;
+
+margin: 0;
+
+word-break: break-all;
+color: #4A4945;
+
+font-size: 0.75rem;
+
+line-height: 1.125rem;
+
+text-align: center;
+}
+.buttomtext{
+  color: #FD0043;
+
+font-size: 0.625rem;
+
+line-height: 0.875rem;
+
+text-align: center;
+
+margin: 0 0.6875rem 0.75rem 0.6875rem;
+}
+.wuy{
+  height: 0.0625rem;
+
+background-color: #E7E2E5;
+
+margin: 0 2.6875rem;
+}
+.buttomtextwrap{
+  height: 2.9375rem;
+
+font-size: 1.125rem;
+
+font-weight: bold;
+
+line-height: 2.9375rem;
+
+color: #1976D2;
+
+text-align: center;
+
+cursor: pointer;
+
+overflow: hidden;
+
+outline: none;
+}
+.leftf{
+ 
+    vertical-align: middle;
+    text-align: center;
+    width: 50%;
+   float: left;
+
+}
+.fd{
+  height: 1.25rem;
+    width: 0.0625rem;
+    float: right;
+    background-color: #E7E2E5;
+    margin-top: 0.8125rem;
+}
+.buttomtextwrap .leftf span{
+  font-size: 1.125rem;
+font-weight: bold;
+line-height: 2.9375rem;
+color: #1976D2;
+text-align: center;
+cursor: pointer;
+
+
+}
+.righty{
+  display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: 50%;
+    font-size: 18px;
+
+font-weight: bold;
+
+line-height: 47px;
+
+color: #1976D2;
+
+text-align: center;
+
+cursor: pointer;
+
+}
+
+.wcwarp{
+  background-color: rgba(0,0,0,0.4);
+
+  position: fixed;
+  
+  top: 0;
+  
+  bottom: 0;
+  
+  left: 0;
+  
+  right: 0;
+  
+  max-width: 37.5rem;
+  
+  margin: 0 auto;
+  
+  z-index: 8;
+  
+  text-align: center;
+}
+.wck{
+  position: relative;
+
+background-color: #FFFFFF;
+
+border-radius: 4px;
+
+width: 88%;
+
+margin:250px auto;
+
+min-height: 130px;
+
+height: auto;
+
+display: inline-block;
+
+vertical-align: middle;
+
+max-width: 330px;
+}
+.tstitle{
+  color: #4A4945;
+
+font-size: 19px;
+
+line-height: 22px;
+
+text-align: center;
+
+margin: 15px 20px;
+
+font-weight: bold;
+}
+.fbwrap{
+  color: #4A4945;
+
+font-size: 14px;
+
+line-height: 18px;
+
+text-align: center;
+
+margin: 0 20px 18px 20px;
+}
+.fbcg{
+  color: #4A4945;
+
+font-size: 14px;
+
+line-height: 18px;
+
+text-align: center;
+padding: 0;
+
+margin: 0;
+
+word-break: break-all;
+}
+.qdsize{
+  height: 60px;
+
+  font-size: 16px;
+  
+  line-height: 60px;
+  
+  color: #79BAF9;
+  
+  text-align: center;
+  
+  cursor: pointer;
+  
+  overflow: hidden;
+  
+  outline: none;
+  
+  margin-right: 40px;
+  
+  display: inline-block;
+  
+  vertical-align: middle;
+}
+.qdwrap{
+  text-align: right;
 }
 

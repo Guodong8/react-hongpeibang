@@ -198,14 +198,14 @@
     padding-bottom: 0.625rem;
     clear: both;
 }
-.Detailedwrap .comment{
+.Detailedwrap .commenta{
   float: right;
-    height: 1.1875rem;
+    /* height: 1.1875rem; */
     font-size: 0;
     margin-left: 0.625rem;
     box-sizing: border-box;
 }
-.Detailedwrap .comment img{
+.Detailedwrap .commenta img{
   width: 1.1875rem;
     height: 1.1875rem;
     font-size: 0;
@@ -213,7 +213,7 @@
     display: inline-block;
     margin-right: 0.3125rem;
 }
-.Detailedwrap .comment .commentfont{
+.Detailedwrap .commenta .commentfont{
   text-align: left;
     font-size: 0.75rem;
     color: #999999;

@@ -21,7 +21,7 @@ export default class Xwtlist extends React.Component{
   render(){
     const {xxlist}=this.state;
     return(
-      <div className="wrap">
+      <div className="wrapa">
             
         {
           xxlist.map(v=>(
@@ -32,10 +32,11 @@ export default class Xwtlist extends React.Component{
               v.recipe.clientId>0? <div className="xiangxi" key={v.recipe.clientId} >
               
               <img src={v.recipe.image}></img>
-               <div className="goodsname">
+
+               <NavLink className="goodsname" to={"/detailPages/"+v.recipeContentId}>
                  <h4>{v.recipe.title}</h4>
                  <p>作者:{v.recipe.clientName}</p>
-               </div>
+               </NavLink>
                </div>:""
             }
 
