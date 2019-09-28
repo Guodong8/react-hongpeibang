@@ -6,13 +6,17 @@ class Adminzj extends React.Component {
         super()
        this.state={
            content:[],
-         
+           likeNum:[]
        }
     }   
+    dianzan(){
+       console.log (777,this.props.canList[0].likeNum++)
+    }
     render(){
        
         const content = this.props.canList;
-        console.log(999,content.length)
+        // const likeNum = this.props.canList[0].likeNum
+    
      
     return (
 <div className="admincontentwrap" >
@@ -39,24 +43,19 @@ class Adminzj extends React.Component {
             <div style={{ marginbottom: '0.6875rem' }}>
                 <div className="workscontentwrap">
 
-                    
-                {
-                             item.image.map((itam)=>(
-
+             
                                
                                
                     <div className="workscontent"  style={{ 
                         
                         width: '100%', height: '18.75rem' }}>
                         
-                                  <Zmage alt="" title="" src={itam}   className="worksimg" style={{ background: 'none', width: '13.6875rem', height: '18.25rem' }} />
+                                  <Zmage alt="呵呵" src={item.image}   className="worksimg" style={{ background: 'none', width: '13.6875rem', height: '18.25rem' }} />
                            
                        
                        
                     </div>
                    
-                     ))
-                    }
                     <a className="worksshade2 worksshade" href="/dish/14728398"></a>
                      
                 </div>
@@ -78,7 +77,7 @@ class Adminzj extends React.Component {
                     <div className="worksup"><img alt="" title=""
                         src={require('../asset/img/up.jpg')}
                         className="worksiconfont" /></div>
-                    <div className="worksnum">{item.likeNum}
+                    <div className="worksnum" onClick={this.dianzan.bind(this)}>{item.likeNum}
                     </div>
                 </div>
                 <div className="worksactions">

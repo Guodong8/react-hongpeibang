@@ -1,5 +1,8 @@
 import React from "react"
 import axios from "axios"
+import {
+    Link
+} from 'react-router-dom'
 class Stcontent extends React.Component{
     constructor(){
         super()
@@ -30,12 +33,17 @@ class Stcontent extends React.Component{
             </div>
             <div className="Recommended_courses">
                 <div className="Recommended_img">
+
+
+
+                    
                 {
                     data.map((item)=>(
                         <div className="Content" key={item.courseId}>
+                        <Link to={"/lession/contentId="+item.courseId} key={item.activityContentId}>
                         <img alt="" title="" 
                         src={item.coverImage}
-                         className="Contentimg" style={{background: 'none', width:'160px', height: '224px'}}></img>
+                         className="Contentimg" style={{background: 'none', width:'160px', height: '224px'}}></img></Link>
                         <div className="Contenttext">{item.title}</div>
                     </div>
 
@@ -166,6 +174,7 @@ class Stcontent extends React.Component{
     async componentDidMount(){
         const {data}=await axios.get(`/hpb/recommend/getRandContent?type=3&pageSize=10`);
         const data1= await axios.get(`/hpb/education/getIndex?`)
+    
        console.log(data1);
         
         this.setState({

@@ -15,11 +15,20 @@ class News extends React.Component {
        this.state={
            content:[],
            canList:[],
-           cancategory:[]
+           cancategory:[],
+           changetitle:{}
        }
     }   
-   
+    changecan(e){
+  console.log(9191,e)
+        this.setState({
+            changetitle:1
+          
+        })
+        console.log(6663131,this.state.changetitle)
+    }
     render(){
+       
         const canList= this.state.canList
         const cancategory = this.state.cancategory
     return (
@@ -59,7 +68,7 @@ class News extends React.Component {
                              {
                                   canList.map((item)=>(
                                   <Link to={"/bakingCircle/"+item.communityId} key={item.communityId}>
-                                      <div className="canlist" key={item.communityId} >
+                                      <div className="canlist" key={item.communityId} onClick={this.changecan.bind(this,item.name)} >
                             {item.name}
                             </div>
                            
@@ -82,16 +91,16 @@ class News extends React.Component {
     }
     async componentDidMount(){
         const data2 = await axios.get(`/hpb/community/getByLimit?isShow=4&pageIndex=0&pageSize=10`);
-        console.log(data2); 
+       
         const {data} = await axios.get(`/hpb/v2/feed/getNew?pageIndex=0&pageSize=10`);
         const data3 = await axios.get(`/hpb/feed/getCategory?`);
-        console.log(123,data3)
+      
         this.setState({
             canList:data2.data.data.data,
             content:data.data.content,
             cancategory:data3.data.data.category[0].item
         })
-        console.log(7999,this.state.cancategory)
+   
 
     }
     // async componentDidMount(){

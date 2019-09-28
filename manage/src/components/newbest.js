@@ -10,7 +10,7 @@ class Newbest extends React.Component{
         }
     } 
     render(){
-        console.log(8889,this.props.communityId)
+     
         return(
         <Adminzj canList={this.state.canList}></Adminzj>
         )
@@ -18,7 +18,7 @@ class Newbest extends React.Component{
     async componentDidMount(){
         const communityId = this.props.communityId
         const data2 = await axios.get(`/hpb/v2/feed/getNewByCommunity?pageIndex=0&pageSize=10&communityId=${communityId}`);
-        console.log(data2);
+       
         this.setState({
             canList:data2.data.data.content
         })

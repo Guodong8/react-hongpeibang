@@ -16,6 +16,7 @@ import nextstep from "./views/ask/twrouter/nextstep"
 import Detailedquestions from "./views/ask/zxwt/Detailedquestions"
 
 import Baking from "./components/Baking"
+import Lession from "./components/Lession"
 import Activity from "./components/Activity"
 import Classify from "./views/study/classify"
 import Course from "./views/study/course"
@@ -59,7 +60,7 @@ function App() {
                 <Route path={"/quzi"} component={quzi}></Route>
                 <Route path={"/nextstep"} component={nextstep}></Route>
                 <Route  path={"/detailedquestions/:id/:a"} component={Detailedquestions}></Route>
-
+                <Route path={"/lession/contentId=:contentId"} component={Lession}></Route>
 
                 <Route  path={"/classify"} component={Classify}></Route>
                 <Route  path={"/video"} exact component={Video}></Route>

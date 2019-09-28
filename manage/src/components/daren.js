@@ -90,11 +90,11 @@ class Daren extends React.Component{
              )
     }async componentDidMount(){
         const {data} = await axios.get('/hpb/v2/feed/getMasterNew?pageIndex=0&pageSize=10');
-        console.log(data);
+     
         this.setState({
             content:data.data.content
         })
-        console.log(this.state.content)
+       
 
 
 
