@@ -1,0 +1,247 @@
+.fybody {
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.fywrap{
+    max-width: 600px;
+}
+.fycontent{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #FFFFFF;
+}
+.fyhead {
+    background: #FFFFFF;
+    height: 44px;
+    z-index: 6;
+    position: fixed;
+    padding: 0 18px;
+    box-sizing: border-box;
+}
+.fyfooter {
+    height: 44px;
+    overflow: hidden;
+    zoom: 1;
+}
+.syiconfont {
+    font-size: 0;
+    height: 44px;
+    float: left;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.syimg {
+    width: 27px;
+    height: 27px;
+    margin: 9.5px 0;
+}
+.fyheadwrap {
+    text-align: left;
+    height: 35px;
+    margin: 4.5px 50px;
+}
+.fyheadcontent {
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 4px;
+    zoom: 1;
+    background-color: #F5F7F9;
+    box-sizing: border-box;
+    padding: 0 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fysearch {
+    color: #4A4945;
+    font-size: 14px;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.fyinput {
+    height: 0;
+    width: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+.fymain {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    top: 44px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.fyleft {
+    background-color: #F5F7F9;
+    position: fixed;
+    z-index: 1;
+    top: 44px;
+    bottom: 0;
+    width: 85px;
+    zoom: 1;
+}
+.leftwrap {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.leftwrap> .fylistwrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -otransition-property: -o-transform;
+    -ms-transition-property: -ms-transform;
+    transition-property: transform;
+    transition-property: transform;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.leftwrap> .fylistwrap> .fylist {
+    font-size: 0;
+    text-align: center;
+    width: 100%;
+    height: 922px;
+    position: relative;
+    -webkit-flex-shrink: 0;
+    -ms-flex: 0 0 auto;
+    flex-shrink: 0;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.listcontent.active {
+    background-color: #FFFFFF;
+    border-left: 3px solid #E98B71;
+}
+.listcontent {
+    width: 100%;
+    font-size: 14px;
+    height: 50px;
+    box-sizing: border-box;
+    color: #4A4945;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*右侧商品信息栏*/
+.fyright {
+    width: 77.33%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 22.67%;
+    margin: 0;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+.fyrightcontent {
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    zoom: 1;
+}
+.fyrighttitlewrap{
+
+        margin: 0 auto;
+        overflow: hidden;
+        zoom: 1;
+
+}
+.fyrightlist {
+    padding: 0 15px;
+    margin: 0 auto;
+    overflow: hidden;
+    zoom: 1;
+}
+.fyrighttitle {
+    padding-top: 10px;
+    padding-left: 16.875px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 22px;
+    color: #313131;
+    overflow: hidden;
+    zoom: 1;
+}
+.fyalllist {
+    display: inline-block;
+    padding: 0px 0px 10px 0px;
+    text-align: center;
+    width: 33.333%;
+    box-sizing: border-box;
+    overflow: hidden;
+    zoom: 1;
+}
+.alllist2{
+   
+        display: block;
+        text-decoration: none;
+    
+}
+.fylist2 {
+    font-size: 0;
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.fylistimg {
+    width: 80px !important;
+    overflow: hidden;
+    height: 80px !important;
+    background: none; width: 80px; height: 80px;
+}
+.fyrightfooter{
+  
+        padding-top: 50px;
+ 
+}
+
+

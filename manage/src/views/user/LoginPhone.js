@@ -1,14 +1,16 @@
 import React from "react"
 import "../../asset/css/loginPhone.css"
 class Login extends React.Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
-            username: '', //账号
-            passWord: '', // 密码
-           
-        }
-        
+            adminName: '', //账号
+            passWord: '', // 密码        
+        };
+        this.userList=["13888888888","13666666666","123456"]
+        // this.userList.push(this.props.location.query.adminName)
+        console.log(this.props.location.query)
+        // this.userList.concat(this.props.location.query.adminName)
     }   
     goback(){
         this.props.history.go(-1)
@@ -16,7 +18,26 @@ class Login extends React.Component{
     toRegister(){
         this.props.history.push("/register")
     }
+    usernameChange(e){
+        this.setState({
+            adminName:e.target.value
+        })      
+    }
+    passwordChange(e){
+        this.setState({
+            passWord:e.target.value
+        })
+    }
     submit(){
+            console.log(this.state.adminName);
+
+            if(this.userList.includes(this.state.adminName)){
+                localStorage.adminName = this.state.adminName;
+                this.props.history.push("/")
+            }else{
+                alert("请注册后再登录");
+                this.props.history.push("/register")
+            }
 
         // this.props.history.push("/user")
     }
@@ -27,6 +48,7 @@ class Login extends React.Component{
         console.log(this.state.username)
     }
     render(){
+       
         return(
             <div className="loginPhone">
                 <div className="loginPhone-header">
@@ -38,12 +60,12 @@ class Login extends React.Component{
                     <div className="adminName">
                         <img src="https://image.hongbeibang.com/Fuxcd1wWFCY-HNifMfUbrcVBqxlc?50X50&imageView2/1/w/50/h/50"></img>
                         <span>+86</span>
-                        <input type ="text" placeholder="输入手机账号" onChange={value => this.handleChange('username', value)}></input>
+                        <input type ="text" placeholder="输入手机账号" onChange={this.usernameChange.bind(this)}></input>
                     </div>
                     <div className="passWord">
                         <img src="https://image.hongbeibang.com/FhVd-FHn1W_yhi5vMjtsAQGSicId?50X50&imageView2/1/w/50/h/50"></img>
                         
-                        <input type ="password" placeholder="输入密码" onChange={value => this.handleChange('passWord', value)}></input>
+                        <input type ="password" placeholder="输入密码" onChange={this.passwordChange.bind(this)}></input>
                     </div>
                     <div className="forgetPassword">忘记密码?</div>
                     <div className="loginPhone-btn">

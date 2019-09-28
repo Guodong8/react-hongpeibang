@@ -1,27 +1,48 @@
 import React from "react";
 import axios from "axios"
-
+import { 
+    NavLink,
+  } from "react-router-dom"
 class SearchList extends React.Component{
     constructor(){
         super();
         this.state={
             searchList:[],
-            searchHistory:[],
+            // searchHistory:[],
             isShow:true,       
         }      
     }
-    sendkeyword(key){
-        this.props.handle(key);      
-    }
+    // sendkeyword(key){
+    //     this.props.handle(key);      
+    // }
     clearSearch(){
-        this.props.clearSh();
+       
         this.setState({
-            isShow:false
+            isShow:false,
+            searchHistory:[]
         })
+        localStorage.removeItem("searchHistory")
     }
+    shopSearch(key){
+        localStorage.searchHistory= key;
+        
+
+        // this.setState({
+        //   searchHistory:  localStorage.searchHistory
+        // })
+        
+        // console.log(this.state.searchHistory)
+        console.log(localStorage.searchHistory)
+      
+    }
+    // sendkeyword(key){
+        
+    //     this.props.handle(key);      
+    // }
     
     render(){
         const searchList = this.state.searchList;
+        const searchHistory = localStorage.searchHistory
        
         return (
             <div> 
@@ -31,10 +52,12 @@ class SearchList extends React.Component{
                 <div className="search-lis">
                       {
                         searchList.map((item)=>(
-                            <span key={item.popularSearchId} className="search-li" onClick={this.sendkeyword.bind(this,item.keyword)} >
-                                {item.keyword}
-                            </span>
-                        ))
+                            <NavLink to={"/search/recipe/"+item.keyword} key={item.popularSearchId}>
+                                <span key={item.popularSearchId} className="search-li" onClick={this.shopSearch.bind(this,item.keyword)}>
+                                        {item.keyword}
+                                 </span>
+                            </NavLink>
+                        ))                     
                     }
                 </div>  
                 
@@ -46,13 +69,17 @@ class SearchList extends React.Component{
                         </span>
                     </div>
                     <div className="search-lis">
-                            {                      
-                                this.props.searchHistory.map((item,c)=>(
+                    <span className="search-li">
+                                        {searchHistory}
+                   </span>
+
+                            {/* {                      
+                                searchHistory.map((item,c)=>(
                                     <span className="search-li" key={c}>
                                         {item}
                                     </span>
                                 ))
-                            }
+                            } */}
                     </div>
                    
                 </div>            
@@ -61,14 +88,9 @@ class SearchList extends React.Component{
     }
     async componentDidMount(){
         const {data} = await axios.get(`/hpb/keyword/detail?_t=1568786276704&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1NzY3MDMxNywiaWF0IjoxNTY4MjgxNTE3fQ.T13b4XrBzIgx5zaDHuS-aEB4zMGfW__uZNsTQldFu7c`);
-        
-        
         this.setState({ 
-            searchList:data.data.popularSearch,
-            
-        })
-        
-        
+            searchList:data.data.popularSearch,        
+        })   
     }
 }
 export default SearchList;

@@ -118,6 +118,7 @@ class DetailPages extends React.Component{
         console.log(contentid)
         const {data} = await axios.get(`/hpb/recipe/get?_t=1569036190893&csrfToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOjAsImV4cCI6MTc1ODM1MzM5NSwiaWF0IjoxNTY4OTY0NTk1fQ.EuAdyOz13iwp498AbzPOdUC3SJ-0szLmC9Nhx61RptI&contentId=${contentid}&quantity=`);
        console.log(data)
+                
         this.setState({ 
             detailsPage:data.data.recipe,
             material:data.data.recipe.material,
@@ -125,8 +126,8 @@ class DetailPages extends React.Component{
             dish:data.data.recipe.dish.data
             
         })
-        console.log(this.state.detailsPage); 
-        console.log(this.state.material);    
+        // console.log(this.state.detailsPage); 
+        // console.log(this.state.material);    
     }
 }
 export default DetailPages;

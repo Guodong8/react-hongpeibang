@@ -9,13 +9,6 @@ import{
 } from "react-router-dom";
 import "../../asset/css/Studynav.css"
 
-import  Skill  from "./skill";
-import  Classify from "./classify"
-import Course from "./course"
-import Video from "./video"
-
-
-
 export default class Studynav extends React.Component{
   constructor(props){
     super(props)
@@ -60,14 +53,13 @@ export default class Studynav extends React.Component{
       
     
     </div>
-    <Switch>
-    <Route path={"/skill"} exact component={Skill}></Route>
-        <Route  path={"/video"} exact component={Video}></Route>
-        <Route  path={"/course"} component={Course}></Route>
-        <Route  path={"/classify"} component={Classify}></Route>
+  
+    
+     
+   
   
         
-    </Switch>
+   
           
   
         </div>

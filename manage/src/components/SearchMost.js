@@ -14,10 +14,10 @@ class SearchMost extends React.Component{
     }
     render(){
         const searchContent= this.props.searchContent
-        console.log(searchContent);
+        // console.log(searchContent);
         return (
             searchContent.map((item)=>(
-                    <Link to={"/detailPages/"+item.contentId} className="searchDetail">
+                    <Link to={"/detailPages/"+item.contentId} key={item.contentId} className="searchDetail">
                         
                         <img src={item.image}></img>
                         <div className="searchDetail-1">

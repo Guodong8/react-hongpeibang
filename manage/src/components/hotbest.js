@@ -11,7 +11,7 @@ class Hotbest extends React.Component{
     } 
     render(){
         
-        console.log(888,this.props.communityId)    
+         
         return(
         <Adminzj canList={this.state.canList}></Adminzj>
         )
@@ -19,11 +19,11 @@ class Hotbest extends React.Component{
     async componentDidMount(){
         const communityId = this.props.communityId
         const data2 = await axios.get(`/hpb/v2/feed/getNewByCommunity?&pageIndex=0&pageSize=30&communityId=${communityId}`);
-        console.log(66666111,data2);
+      
         this.setState({
             canList:(data2.data.data.content).sort(data2.data.data.content.communityHotNum)
         })
-        console.log(101010,this.state.canList)
+      
 
     }
 }
