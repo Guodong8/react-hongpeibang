@@ -18,7 +18,7 @@ class Activity extends React.Component{
              
               
                      <div>
-                         <img src={community2.coverImage}></img>
+                         <img src={community2.coverImage} style={{width:'200px',height:'200px'}}></img>
                      </div>
               
          
