@@ -24,9 +24,8 @@ class SearchList extends React.Component{
         localStorage.removeItem("searchHistory")
     }
     shopSearch(key){
-        // localStorage.searchHistory= key;
-        localStorage.searchHistory=Array.from(key) ;
-        localStorage.searchHistory = localStorage.searchHistory.concat(Array.from(key));
+        localStorage.searchHistory= key;
+        
 
         // this.setState({
         //   searchHistory:  localStorage.searchHistory
@@ -58,9 +57,7 @@ class SearchList extends React.Component{
                                         {item.keyword}
                                  </span>
                             </NavLink>
-  
-                        ))
-                      
+                        ))                     
                     }
                 </div>  
                 

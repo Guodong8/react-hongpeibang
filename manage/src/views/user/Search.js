@@ -34,6 +34,9 @@ class Search extends React.Component{
             searchHistory:[]
         })   
     }
+    sendsearch(){
+        localStorage.searchHistory=this.state.keyword
+    }
 //   shopSearch(key){
 //     //   console.log(key);
 //     const keyword= this.state.keyword || key;
@@ -54,7 +57,7 @@ class Search extends React.Component{
                     </span>
                     <input type="text" placeholder="搜索食谱/食材，烘焙/家常菜一应俱全" onChange={this.changeSearch.bind(this)}></input>
                     
-                    <NavLink to={"/search/recipe/"+this.state.keyword}><span >搜索</span></NavLink>
+                    <NavLink to={"/search/recipe/"+this.state.keyword}><span onClick={this.sendsearch.bind(this)}>搜索</span></NavLink>
                     
                 </div>
                 <div className="search-head1"></div>
