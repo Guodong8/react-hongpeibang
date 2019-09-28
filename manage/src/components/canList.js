@@ -15,24 +15,23 @@ class canList extends React.Component{
        }
     } 
     changeIndex(index){
-      console.log(11111);
+     
       this.setState({
           index
       })
   }
-    goahead(){
-        this.props.history.go(-1)
-       }
+  
     render(){
       // const communityId = this.props.communityId
       // console.log(6666,communityId)
         const community = this.state.communityC;
+        
       return(
        <div className="newswrap">
            <div>
              <div className="canListnav">
                <span className="goahead">
-               <img onClick={this.goahead.bind(this)} alt="" title="" src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&amp;imageView2/1/w/48/h/48" className="canListimg" />
+               <img onClick={this.props.hanndler} alt="" title="" src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&amp;imageView2/1/w/48/h/48" className="canListimg" />
                </span>
                <ul className="breakfast" >#早餐#</ul>
              </div>  
@@ -53,7 +52,7 @@ class canList extends React.Component{
  
 }
 function MyDiv(props) {
-  console.log(333,props.communityId)
+ 
     
   return (
       <div className="one">

@@ -6,13 +6,17 @@ class Adminzj extends React.Component {
         super()
        this.state={
            content:[],
-         
+           likeNum:[]
        }
     }   
+    dianzan(){
+       console.log (777,this.props.canList[0].likeNum++)
+    }
     render(){
        
         const content = this.props.canList;
-        console.log(999,this.props.canList)
+        // const likeNum = this.props.canList[0].likeNum
+    
      
     return (
 <div className="admincontentwrap" >
@@ -33,13 +37,27 @@ class Adminzj extends React.Component {
                 </div>
                 <div className="admindescribe"><span>{item.createTime}</span><span className="adminworks">{item.coverTitle}</span></div>
             </div>
-            <div className="conversation"><span className="conversationtext">{item.communityName}</span><span></span></div>
+            <div className="conversation">
+                <span className="conversationtext">{item.communityName}</span>
+                <span>{item.introduce}</span></div>
             <div style={{ marginbottom: '0.6875rem' }}>
                 <div className="workscontentwrap">
-                    <div className="workscontent" style={{ width: '100%', height: '18.75rem' }}>
-                        <Zmage alt="" title="" src={item.image}
-                        className="worksimg" style={{ background: 'none', width: '13.6875rem', height: '18.25rem' }} />
-                    </div><a className="worksshade2 worksshade" href="/dish/14728398"></a>
+
+             
+                               
+                               
+                    <div className="workscontent"  style={{ 
+                        
+                        width: '100%', height: '18.75rem' }}>
+                        
+                                  <Zmage alt="呵呵" src={item.image}   className="worksimg" style={{ background: 'none', width: '13.6875rem', height: '18.25rem' }} />
+                           
+                       
+                       
+                    </div>
+                   
+                    <a className="worksshade2 worksshade" href="/dish/14728398"></a>
+                     
                 </div>
             </div>
             <div style={{ marginbottom: '0.9375rem', padding: '0 0.9375rem' }}>
@@ -59,7 +77,7 @@ class Adminzj extends React.Component {
                     <div className="worksup"><img alt="" title=""
                         src={require('../asset/img/up.jpg')}
                         className="worksiconfont" /></div>
-                    <div className="worksnum">{item.likeNum}
+                    <div className="worksnum" onClick={this.dianzan.bind(this)}>{item.likeNum}
                     </div>
                 </div>
                 <div className="worksactions">
