@@ -14,7 +14,7 @@ class Lession extends React.Component{
 {
    
         content.map((item)=>(
-            <div  dangerouslySetInnerHTML = {{ __html:item.introduce }}>
+            <div  dangerouslySetInnerHTML = {{ __html:item.introduce }} key={item.educationCourseSummaryExtendId}>
      
         </div>
         ))
